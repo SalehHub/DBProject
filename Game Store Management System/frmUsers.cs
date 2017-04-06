@@ -24,7 +24,7 @@ namespace Game_Store_Management_System
         private void showAllUsers()
         {
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT username AS Username,name As Name,type AS Type FROM Users;";
+            cmd2.CommandText = "SELECT username AS Username,name As Name,type AS Type FROM User;";
 
             try
             {
@@ -143,7 +143,7 @@ namespace Game_Store_Management_System
 
 
                 SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-                cmd.CommandText = "INSERT INTO Users VALUES(@Username,@Password,@Name,@Type)";
+                cmd.CommandText = "INSERT INTO User VALUES(@Username,@Password,@Name,@Type)";
                 cmd.Parameters.AddWithValue("Username", Username.Trim());
                 cmd.Parameters.AddWithValue("Name", Name.Trim());
                 cmd.Parameters.AddWithValue("Password", Password);
@@ -191,7 +191,7 @@ namespace Game_Store_Management_System
                 {
 
                     SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-                    cmd.CommandText = "DELETE FROM Users WHERE username = @Username;";
+                    cmd.CommandText = "DELETE FROM User WHERE username = @Username;";
                     cmd.Parameters.AddWithValue("Username", Username);
 
                     try
@@ -229,14 +229,14 @@ namespace Game_Store_Management_System
                 {
 
 
-                    cmd.CommandText = "Update Users SET Name=@Name, Password=@Password,Type=@Type WHERE Username=@Username;";
+                    cmd.CommandText = "Update User SET Name=@Name, Password=@Password,Type=@Type WHERE Username=@Username;";
                     cmd.Parameters.AddWithValue("Password", Password);
                 }
                 else if (ckPass.Checked == false)
                 {
 
 
-                    cmd.CommandText = "Update Users SET Name=@Name,Type=@Type WHERE Username=@Username;";
+                    cmd.CommandText = "Update User SET Name=@Name,Type=@Type WHERE Username=@Username;";
                 }
 
 
@@ -277,7 +277,7 @@ namespace Game_Store_Management_System
         {
             string search = txtSearch.Text;
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT Username AS Username,name As Name,type AS Type FROM Users WHERE Username LIKE @Search or Name LIKE @Search or type LIKE @Search;";
+            cmd2.CommandText = "SELECT Username AS Username,name As Name,type AS Type FROM User WHERE Username LIKE @Search or Name LIKE @Search or type LIKE @Search;";
 
             cmd2.Parameters.AddWithValue("@Search","%" + search + "%");
             try
