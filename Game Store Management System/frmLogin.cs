@@ -44,7 +44,7 @@ namespace Game_Store_Management_System
         {
 
             SqlCommand cmd = sqlDBConnection.CreateCommand();
-            cmd.CommandText = "INSERT INTO loginRecords VALUES(@Username, @Date)";
+            cmd.CommandText = "INSERT INTO login_Record VALUES(@Username, @Date)";
             cmd.Parameters.AddWithValue("Username", Username);
             cmd.Parameters.AddWithValue("Date", DateTime.Now);
             try
@@ -65,7 +65,7 @@ namespace Game_Store_Management_System
                 String Password = GetHashString(txtPassword.Text);
 
                 SqlCommand cmd = sqlDBConnection.CreateCommand();
-                cmd.CommandText = "SELECT * FROM Users WHERE Username = @Username AND Password = @Password";
+                cmd.CommandText = "SELECT * FROM Staff WHERE Username = @Username AND Password = @Password";
                 cmd.Parameters.AddWithValue("Username", Username);
                 cmd.Parameters.AddWithValue("Password", Password);
                 try
