@@ -12,3 +12,5 @@ D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game_Store_Ma
 D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game Store Management System.csproj.GenerateResource.Cache
 D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game Store Management System.exe
 D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game Store Management System.pdb
+D:\iBraHem\GitHub\DBProject\Game Store Management System\bin\Debug\DB\GameStore.mdf
+D:\iBraHem\GitHub\DBProject\Game Store Management System\bin\Debug\DB\GameStore_log.ldf
