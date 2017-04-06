@@ -71,7 +71,7 @@ namespace Game_Store_Management_System
             if (validateAddNewCustomer())
             {
 
-                cmd.CommandText = "Update Customers SET Name=@Name,Email=@email, Points=@Points WHERE ID=@Id;";
+                cmd.CommandText = "Update Customer SET Name=@Name,Email=@email, Points=@Points WHERE ID=@Id;";
 
 
                 cmd.Parameters.AddWithValue("Name", Name);
@@ -237,7 +237,7 @@ namespace Game_Store_Management_System
         private void showAllCustomers()
         {
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT ID as ID, name AS Name,email As Email,points AS Points FROM Customers;";
+            cmd2.CommandText = "SELECT ID as ID, Fname AS First_Name, Lname AS Last_Name,email As Email FROM Customer;";
 
             try
             {
@@ -274,7 +274,7 @@ namespace Game_Store_Management_System
                 {
 
                     SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-                    cmd.CommandText = "DELETE FROM Customers WHERE ID = @ID;";
+                    cmd.CommandText = "DELETE FROM Customer WHERE ID = @ID;";
                     cmd.Parameters.AddWithValue("ID",ID );
 
                     try
@@ -323,6 +323,11 @@ namespace Game_Store_Management_System
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gbadd_Enter(object sender, EventArgs e)
+        {
+
         }
     }
     }

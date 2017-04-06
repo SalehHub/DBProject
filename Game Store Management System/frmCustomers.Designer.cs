@@ -41,11 +41,11 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.gbadd = new System.Windows.Forms.GroupBox();
+            this.txtPoints = new System.Windows.Forms.MaskedTextBox();
             this.lblPoints = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgUsers = new System.Windows.Forms.DataGridView();
-            this.txtPoints = new System.Windows.Forms.MaskedTextBox();
             this.gbadd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Location = new System.Drawing.Point(823, 237);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(298, 39);
+            this.txtSearch.Size = new System.Drawing.Size(298, 57);
             this.txtSearch.TabIndex = 15;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -95,7 +95,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(137, 82);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(229, 39);
+            this.txtEmail.Size = new System.Drawing.Size(229, 57);
             this.txtEmail.TabIndex = 6;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
@@ -103,7 +103,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(137, 28);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(229, 39);
+            this.txtName.Size = new System.Drawing.Size(229, 57);
             this.txtName.TabIndex = 5;
             // 
             // btnEdit
@@ -131,7 +131,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 33);
+            this.label3.Size = new System.Drawing.Size(0, 51);
             this.label3.TabIndex = 3;
             // 
             // label1
@@ -139,7 +139,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 33);
+            this.label1.Size = new System.Drawing.Size(125, 51);
             this.label1.TabIndex = 1;
             this.label1.Text = "Name";
             // 
@@ -159,7 +159,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(712, 237);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 33);
+            this.label5.Size = new System.Drawing.Size(163, 51);
             this.label5.TabIndex = 16;
             this.label5.Text = "Search: ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -183,13 +183,23 @@
             this.gbadd.TabIndex = 11;
             this.gbadd.TabStop = false;
             this.gbadd.Visible = false;
+            this.gbadd.Enter += new System.EventHandler(this.gbadd_Enter);
+            // 
+            // txtPoints
+            // 
+            this.txtPoints.Location = new System.Drawing.Point(485, 31);
+            this.txtPoints.Mask = "0000";
+            this.txtPoints.Name = "txtPoints";
+            this.txtPoints.PromptChar = ' ';
+            this.txtPoints.Size = new System.Drawing.Size(140, 57);
+            this.txtPoints.TabIndex = 19;
             // 
             // lblPoints
             // 
             this.lblPoints.AutoSize = true;
             this.lblPoints.Location = new System.Drawing.Point(396, 34);
             this.lblPoints.Name = "lblPoints";
-            this.lblPoints.Size = new System.Drawing.Size(86, 33);
+            this.lblPoints.Size = new System.Drawing.Size(129, 51);
             this.lblPoints.TabIndex = 17;
             this.lblPoints.Text = "Points";
             // 
@@ -198,7 +208,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 33);
+            this.label2.Size = new System.Drawing.Size(125, 51);
             this.label2.TabIndex = 2;
             this.label2.Text = "Email";
             // 
@@ -232,18 +242,9 @@
             this.dgUsers.Size = new System.Drawing.Size(1107, 376);
             this.dgUsers.TabIndex = 9;
             // 
-            // txtPoints
-            // 
-            this.txtPoints.Location = new System.Drawing.Point(485, 31);
-            this.txtPoints.Mask = "0000";
-            this.txtPoints.Name = "txtPoints";
-            this.txtPoints.PromptChar = ' ';
-            this.txtPoints.Size = new System.Drawing.Size(140, 39);
-            this.txtPoints.TabIndex = 19;
-            // 
             // frmCustomers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(24F, 49F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1147, 734);
             this.Controls.Add(this.txtSearch);
