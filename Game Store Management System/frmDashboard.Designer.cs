@@ -44,7 +44,7 @@
             this.btnManageItems.Name = "btnManageItems";
             this.btnManageItems.Size = new System.Drawing.Size(274, 74);
             this.btnManageItems.TabIndex = 0;
-            this.btnManageItems.Text = "Manage items";
+            this.btnManageItems.Text = "Manage Games";
             this.btnManageItems.UseVisualStyleBackColor = true;
             this.btnManageItems.Click += new System.EventHandler(this.btnManageItems_Click);
             // 
@@ -56,7 +56,7 @@
             this.btnManageUsers.Name = "btnManageUsers";
             this.btnManageUsers.Size = new System.Drawing.Size(274, 74);
             this.btnManageUsers.TabIndex = 1;
-            this.btnManageUsers.Text = "Manage Users";
+            this.btnManageUsers.Text = "Manage Staffs";
             this.btnManageUsers.UseVisualStyleBackColor = true;
             this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
@@ -92,7 +92,7 @@
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(1041, 33);
             this.lblWelcome.TabIndex = 4;
-            this.lblWelcome.Text = "Welcome, User";
+            this.lblWelcome.Text = "Welcome, Staff";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnLogout

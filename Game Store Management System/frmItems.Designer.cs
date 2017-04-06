@@ -33,7 +33,6 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtDes = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.gbadd = new System.Windows.Forms.GroupBox();
@@ -41,10 +40,7 @@
             this.txtQu = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbPl = new System.Windows.Forms.ComboBox();
-            this.txtPoints = new System.Windows.Forms.MaskedTextBox();
-            this.lblPoints = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -108,14 +104,6 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // txtDes
-            // 
-            this.txtDes.Location = new System.Drawing.Point(157, 82);
-            this.txtDes.Multiline = true;
-            this.txtDes.Name = "txtDes";
-            this.txtDes.Size = new System.Drawing.Size(229, 93);
-            this.txtDes.TabIndex = 6;
-            // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(157, 28);
@@ -141,15 +129,11 @@
             this.gbadd.Controls.Add(this.txtQu);
             this.gbadd.Controls.Add(this.label6);
             this.gbadd.Controls.Add(this.cmbPl);
-            this.gbadd.Controls.Add(this.txtPoints);
-            this.gbadd.Controls.Add(this.lblPoints);
             this.gbadd.Controls.Add(this.txtPrice);
             this.gbadd.Controls.Add(this.lblPrice);
             this.gbadd.Controls.Add(this.btnCancel);
-            this.gbadd.Controls.Add(this.txtDes);
             this.gbadd.Controls.Add(this.txtName);
             this.gbadd.Controls.Add(this.label3);
-            this.gbadd.Controls.Add(this.label2);
             this.gbadd.Controls.Add(this.label1);
             this.gbadd.Controls.Add(this.btnSave);
             this.gbadd.Controls.Add(this.btnUpdate);
@@ -203,25 +187,6 @@
             this.cmbPl.Size = new System.Drawing.Size(140, 39);
             this.cmbPl.TabIndex = 22;
             // 
-            // txtPoints
-            // 
-            this.txtPoints.Enabled = false;
-            this.txtPoints.Location = new System.Drawing.Point(575, 82);
-            this.txtPoints.Mask = "0000";
-            this.txtPoints.Name = "txtPoints";
-            this.txtPoints.PromptChar = ' ';
-            this.txtPoints.Size = new System.Drawing.Size(140, 39);
-            this.txtPoints.TabIndex = 21;
-            // 
-            // lblPoints
-            // 
-            this.lblPoints.AutoSize = true;
-            this.lblPoints.Location = new System.Drawing.Point(486, 85);
-            this.lblPoints.Name = "lblPoints";
-            this.lblPoints.Size = new System.Drawing.Size(86, 33);
-            this.lblPoints.TabIndex = 20;
-            this.lblPoints.Text = "Points";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -229,15 +194,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(0, 33);
             this.label3.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 33);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Description";
             // 
             // label1
             // 
@@ -353,17 +309,13 @@
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtDes;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox gbadd;
         private System.Windows.Forms.MaskedTextBox txtQu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbPl;
-        private System.Windows.Forms.MaskedTextBox txtPoints;
-        private System.Windows.Forms.Label lblPoints;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEdit;

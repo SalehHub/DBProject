@@ -21,7 +21,7 @@ namespace Game_Store_Management_System
         private void showAll()
         {
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT username AS Username, date AS 'Login date' FROM LoginRecords ORDER by date desc;";
+            cmd2.CommandText = "SELECT username AS Username, date AS 'Login date' FROM Login_Record ORDER by date desc;";
 
             try
             {
@@ -44,7 +44,7 @@ namespace Game_Store_Management_System
             try
             {
                 SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-                cmd.CommandText = "SELECT username FROM users;";
+                cmd.CommandText = "SELECT username FROM Staff;";
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -69,7 +69,7 @@ namespace Game_Store_Management_System
             string username = cmbUsers.Text;
 
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT username AS Username, date AS 'Login date' FROM LoginRecords where Username=@Username ORDER by date desc;";
+            cmd2.CommandText = "SELECT username AS Username, date AS 'Login date' FROM Login_Record where Username=@Username ORDER by date desc;";
             cmd2.Parameters.AddWithValue("Username",username);
             try
             {
@@ -98,7 +98,7 @@ namespace Game_Store_Management_System
             DateTime date2 = date1.AddHours(24);
 
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT username AS Username, date AS 'Login date' FROM LoginRecords WHERE Date >= @date1 AND Date <= @date2  ORDER by date desc;";
+            cmd2.CommandText = "SELECT username AS Username, date AS 'Login date' FROM Login_Record WHERE Date >= @date1 AND Date <= @date2  ORDER by date desc;";
             cmd2.Parameters.AddWithValue("date1", date1);
             cmd2.Parameters.AddWithValue("date2", date2);
             try

@@ -31,6 +31,7 @@
             this.dgUsers = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gbadd = new System.Windows.Forms.GroupBox();
+            this.ckPass = new System.Windows.Forms.CheckBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.cmbType = new System.Windows.Forms.ComboBox();
@@ -47,7 +48,6 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.ckPass = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).BeginInit();
             this.gbadd.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +78,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(233, 52);
             this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Add new user";
+            this.btnAdd.Text = "Add new staff";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -103,6 +103,17 @@
             this.gbadd.TabIndex = 3;
             this.gbadd.TabStop = false;
             this.gbadd.Visible = false;
+            // 
+            // ckPass
+            // 
+            this.ckPass.AutoSize = true;
+            this.ckPass.Location = new System.Drawing.Point(12, 178);
+            this.ckPass.Name = "ckPass";
+            this.ckPass.Size = new System.Drawing.Size(239, 37);
+            this.ckPass.TabIndex = 11;
+            this.ckPass.Text = "Update password?";
+            this.ckPass.UseVisualStyleBackColor = true;
+            this.ckPass.Visible = false;
             // 
             // btnCancel
             // 
@@ -255,17 +266,6 @@
             this.label5.Text = "Search: ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // ckPass
-            // 
-            this.ckPass.AutoSize = true;
-            this.ckPass.Location = new System.Drawing.Point(12, 178);
-            this.ckPass.Name = "ckPass";
-            this.ckPass.Size = new System.Drawing.Size(239, 37);
-            this.ckPass.TabIndex = 11;
-            this.ckPass.Text = "Update password?";
-            this.ckPass.UseVisualStyleBackColor = true;
-            this.ckPass.Visible = false;
-            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
@@ -284,7 +284,7 @@
             this.Name = "frmUsers";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manage users";
+            this.Text = "Manage staffs";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.usersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).EndInit();

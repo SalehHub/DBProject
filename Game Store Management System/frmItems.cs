@@ -26,14 +26,11 @@ namespace Game_Store_Management_System
             gbadd.Visible = true;
             btnUpdate.Visible = false;
             btnSave.Visible = true;
-           // txtPoints.Visible = false;
            // lblPrice.Visible = false;
 
-            txtDes.Text = "";
             txtName.Text = "";
             txtPrice.Text = "";
             txtQu.Text = "";
-            txtPoints.Text = "";
             cmbPl.Text = "";
 
 
@@ -53,16 +50,14 @@ namespace Game_Store_Management_System
                 decimal.TryParse(txtPrice.Text.Replace(" ", ""), out Price3);
 
                 string Name = txtName.Text;
-                string Des = txtDes.Text;
                 decimal Price = Price3;
                 string Qu = txtQu.Text;
                 string Pl = cmbPl.Text;
 
 
                 SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-                cmd.CommandText = "INSERT INTO Items(Name,Description,Price,Quantity,Platform) VALUES(@Name,@Des,@Price,@Qu,@Pl)";
+                cmd.CommandText = "INSERT INTO Game(Name,Price,Quantity,Platform) VALUES(@Name,@Price,@Qu,@Pl)";
                 cmd.Parameters.AddWithValue("Name", Name.Trim());
-                cmd.Parameters.AddWithValue("Des", Des.Trim());
                 cmd.Parameters.AddWithValue("Price", Price);
                 cmd.Parameters.AddWithValue("Qu", Qu.Trim());
                 cmd.Parameters.AddWithValue("Pl", Pl.Trim());
@@ -71,11 +66,9 @@ namespace Game_Store_Management_System
                 {
                     cmd.ExecuteScalar();
 
-                    txtDes.Text = "";
                     txtName.Text = "";
                     txtPrice.Text = "";
                     txtQu.Text = "";
-                    txtPoints.Text = "";
                     cmbPl.Text = "";
 
 
@@ -84,7 +77,7 @@ namespace Game_Store_Management_System
                     gbadd.Visible = false;
                     btnEdit.Visible = true;
 
-                    showAllItems();
+                    showAllGames();
 
 
                 }
@@ -97,7 +90,7 @@ namespace Game_Store_Management_System
 
         private void frmItems_Load(object sender, EventArgs e)
         {
-            showAllItems();
+            showAllGames();
 
         }
 
@@ -107,7 +100,6 @@ namespace Game_Store_Management_System
         {
 
             string Name = txtName.Text;
-            string Des = txtDes.Text;
             //decimal Price = Convert.ToDecimal(txtPrice.Text.Replace(" ", ""));
             string Qu = txtQu.Text;
             string Pl = cmbPl.Text;
@@ -181,10 +173,10 @@ namespace Game_Store_Management_System
 
         }
 
-        private void showAllItems()
+        private void showAllGames()
         {
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT ID, Name,Description,Price,Quantity,Platform FROM Items;";
+            cmd2.CommandText = "SELECT ID, Name,Price,Quantity,Platform FROM Game;";
 
             try
             {
@@ -207,21 +199,18 @@ namespace Game_Store_Management_System
             gbadd.Visible = true;
             btnSave.Visible = false;
             btnUpdate.Visible = true;
-            txtPoints.Visible = true;
-            lblPoints.Visible = true;
+
 
 
             itemID = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[0].Value.ToString();
             string name = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[1].Value.ToString();
-            string des = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[2].Value.ToString();
            
-             decimal res=decimal.Parse(dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[3].Value.ToString(), CultureInfo.InvariantCulture);
-            string qu = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[4].Value.ToString();
-            string pf = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[5].Value.ToString();
+             decimal res=decimal.Parse(dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[2].Value.ToString(), CultureInfo.InvariantCulture);
+            string qu = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[3].Value.ToString();
+            string pf = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[4].Value.ToString();
 
             txtName.Text = name;
-            txtDes.Text = des;
-            txtPrice.Text = res.ToString();
+           txtPrice.Text = res.ToString();
             txtQu.Text = qu;
             cmbPl.Text = pf;
         }
@@ -241,16 +230,14 @@ namespace Game_Store_Management_System
                 decimal.TryParse(txtPrice.Text.Replace(" ", ""), out Price3);
 
                 string Name = txtName.Text;
-                string Des = txtDes.Text;
                 decimal Price = Price3;
                 string Qu = txtQu.Text;
                 string Pl = cmbPl.Text;
 
 
                 SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-                cmd.CommandText = "Update Items Set Name=@Name,Description=@Des,Price=@Price,Quantity=@Qu,Platform=@Pl Where ID=@ID";
+                cmd.CommandText = "Update Game Set Name=@Name,Price=@Price,Quantity=@Qu,Platform=@Pl Where ID=@ID";
                 cmd.Parameters.AddWithValue("Name", Name.Trim());
-                cmd.Parameters.AddWithValue("Des", Des.Trim());
                 cmd.Parameters.AddWithValue("Price", Price);
                 cmd.Parameters.AddWithValue("Qu", Qu.Trim());
                 cmd.Parameters.AddWithValue("Pl", Pl.Trim());
@@ -260,11 +247,9 @@ namespace Game_Store_Management_System
                 {
                     cmd.ExecuteScalar();
 
-                    txtDes.Text = "";
                     txtName.Text = "";
                     txtPrice.Text = "";
                     txtQu.Text = "";
-                    txtPoints.Text = "";
                     cmbPl.Text = "";
 
 
@@ -273,7 +258,7 @@ namespace Game_Store_Management_System
                     gbadd.Visible = false;
                     btnEdit.Visible = true;
 
-                    showAllItems();
+                    showAllGames();
 
 
                 }
@@ -293,18 +278,18 @@ namespace Game_Store_Management_System
 
 
             if (MessageBox.Show("Are you sure you want to delete this item?\n\nName: " + name
-               , "Fuck you", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+               , "Danger", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
 
                 SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-                cmd.CommandText = "DELETE FROM Items WHERE ID = @ID;";
+                cmd.CommandText = "DELETE FROM Game WHERE ID = @ID;";
                 cmd.Parameters.AddWithValue("ID", ID);
 
                 try
                 {
                     cmd.ExecuteScalar();
 
-                    showAllItems();
+                    showAllGames();
                 }
                 catch (SqlException ex)
                 {
@@ -318,7 +303,7 @@ namespace Game_Store_Management_System
         {
             string search = txtSearch.Text;
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT * From Items WHERE Name LIKE @Search or Description LIKE @Search or ID LIKE @Search or Platform LIKE @Search or Quantity LIKE @Search or Price LIKE @Search;";
+            cmd2.CommandText = "SELECT * From Game WHERE Name LIKE @Search or LIKE @Search or ID LIKE @Search or Platform LIKE @Search or Quantity LIKE @Search or Price LIKE @Search;";
 
             cmd2.Parameters.AddWithValue("@Search", "%" + search + "%");
             try
