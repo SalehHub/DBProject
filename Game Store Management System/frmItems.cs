@@ -22,7 +22,7 @@ namespace Game_Store_Management_System
         public string itemID;
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            //tessts
             gbadd.Visible = true;
             btnUpdate.Visible = false;
             btnSave.Visible = true;

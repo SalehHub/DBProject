@@ -1,0 +1,14 @@
+D:\iBraHem\GitHub\DBProject\Game Store Management System\bin\Debug\Game Store Management System.exe.config
+D:\iBraHem\GitHub\DBProject\Game Store Management System\bin\Debug\Game Store Management System.exe
+D:\iBraHem\GitHub\DBProject\Game Store Management System\bin\Debug\Game Store Management System.pdb
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game Store Management System.csprojResolveAssemblyReference.cache
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmCustomers.resources
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmItems.resources
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmLogin.resources
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmDashboard.resources
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmLoginRecords.resources
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.Properties.Resources.resources
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmUsers.resources
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game Store Management System.csproj.GenerateResource.Cache
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game Store Management System.exe
+D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game Store Management System.pdb
