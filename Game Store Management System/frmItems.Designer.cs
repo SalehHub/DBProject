@@ -78,7 +78,7 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(486, 31);
+            this.lblPrice.Location = new System.Drawing.Point(457, 31);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(72, 33);
             this.lblPrice.TabIndex = 17;
@@ -106,7 +106,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(157, 28);
+            this.txtName.Location = new System.Drawing.Point(91, 25);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(229, 39);
             this.txtName.TabIndex = 5;
@@ -165,7 +165,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(462, 130);
+            this.label6.Location = new System.Drawing.Point(456, 130);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 33);
             this.label6.TabIndex = 23;
@@ -289,6 +289,7 @@
             this.Controls.Add(this.txtSearch);
             this.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "frmItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmItems";

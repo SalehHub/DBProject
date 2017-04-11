@@ -77,7 +77,7 @@ namespace Game_Store_Management_System
                     {
                         userUsername = reader[0].ToString();
                         userName = reader[2].ToString();
-                        userType = reader[3].ToString();
+                        userType = reader[4].ToString();
                         //Properties.Settings.Default.Username = reader[0].ToString();
                         //Properties.Settings.Default.Name = reader[2].ToString();
                         //Properties.Settings.Default.Type = reader[3].ToString();

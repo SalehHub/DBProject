@@ -25,6 +25,15 @@ namespace Game_Store_Management_System
                 btnManageUsers.Visible = false;
                 btnshowLoginRecords.Visible = false;
             }
+
+
+            if (frmLogin.userUsername == "sys")
+            {
+
+                this.BackColor = Color.Navy;
+
+
+            }
         }
 
         private void btnshowLoginRecords_Click(object sender, EventArgs e)

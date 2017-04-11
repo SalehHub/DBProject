@@ -48,6 +48,8 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtLName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).BeginInit();
             this.gbadd.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +87,8 @@
             // gbadd
             // 
             this.gbadd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbadd.Controls.Add(this.txtLName);
+            this.gbadd.Controls.Add(this.label6);
             this.gbadd.Controls.Add(this.ckPass);
             this.gbadd.Controls.Add(this.btnCancel);
             this.gbadd.Controls.Add(this.btnUpdate);
@@ -97,9 +101,9 @@
             this.gbadd.Controls.Add(this.label2);
             this.gbadd.Controls.Add(this.label1);
             this.gbadd.Controls.Add(this.btnSave);
-            this.gbadd.Location = new System.Drawing.Point(455, 2);
+            this.gbadd.Location = new System.Drawing.Point(352, 2);
             this.gbadd.Name = "gbadd";
-            this.gbadd.Size = new System.Drawing.Size(672, 224);
+            this.gbadd.Size = new System.Drawing.Size(775, 224);
             this.gbadd.TabIndex = 3;
             this.gbadd.TabStop = false;
             this.gbadd.Visible = false;
@@ -114,10 +118,11 @@
             this.ckPass.Text = "Update password?";
             this.ckPass.UseVisualStyleBackColor = true;
             this.ckPass.Visible = false;
+            this.ckPass.CheckedChanged += new System.EventHandler(this.ckPass_CheckedChanged);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(400, 123);
+            this.btnCancel.Location = new System.Drawing.Point(404, 163);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 52);
             this.btnCancel.TabIndex = 10;
@@ -127,7 +132,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(540, 123);
+            this.btnUpdate.Location = new System.Drawing.Point(544, 163);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(126, 52);
             this.btnUpdate.TabIndex = 9;
@@ -141,13 +146,14 @@
             this.cmbType.Items.AddRange(new object[] {
             "admin",
             "staff"});
-            this.cmbType.Location = new System.Drawing.Point(468, 31);
+            this.cmbType.Location = new System.Drawing.Point(571, 28);
             this.cmbType.Name = "cmbType";
             this.cmbType.Size = new System.Drawing.Size(198, 39);
             this.cmbType.TabIndex = 8;
             // 
             // txtPassword
             // 
+            this.txtPassword.Enabled = false;
             this.txtPassword.Location = new System.Drawing.Point(137, 136);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(229, 39);
@@ -171,7 +177,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(394, 31);
+            this.label4.Location = new System.Drawing.Point(497, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 33);
             this.label4.TabIndex = 4;
@@ -191,9 +197,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 33);
+            this.label2.Size = new System.Drawing.Size(132, 33);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Name";
+            this.label2.Text = "First name";
             // 
             // label1
             // 
@@ -206,7 +212,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(544, 123);
+            this.btnSave.Location = new System.Drawing.Point(544, 163);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(122, 52);
             this.btnSave.TabIndex = 0;
@@ -266,6 +272,22 @@
             this.label5.Text = "Search: ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // txtLName
+            // 
+            this.txtLName.Location = new System.Drawing.Point(571, 79);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.Size = new System.Drawing.Size(198, 39);
+            this.txtLName.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(438, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 33);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Last name";
+            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
@@ -317,5 +339,7 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox ckPass;
+        private System.Windows.Forms.TextBox txtLName;
+        private System.Windows.Forms.Label label6;
     }
 }

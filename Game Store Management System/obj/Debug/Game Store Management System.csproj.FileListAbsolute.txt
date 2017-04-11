@@ -29,4 +29,3 @@ C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.csproj.GenerateResource.Cache
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.exe
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.pdb
-C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.csprojResolveAssemblyReference.cache

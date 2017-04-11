@@ -187,7 +187,7 @@
             // 
             // txtLName
             // 
-            this.txtLName.Location = new System.Drawing.Point(526, 34);
+            this.txtLName.Location = new System.Drawing.Point(529, 25);
             this.txtLName.Name = "txtLName";
             this.txtLName.PromptChar = ' ';
             this.txtLName.Size = new System.Drawing.Size(140, 39);
@@ -197,7 +197,7 @@
             // lblLName
             // 
             this.lblLName.AutoSize = true;
-            this.lblLName.Location = new System.Drawing.Point(396, 34);
+            this.lblLName.Location = new System.Drawing.Point(396, 28);
             this.lblLName.Name = "lblLName";
             this.lblLName.Size = new System.Drawing.Size(127, 33);
             this.lblLName.TabIndex = 17;

@@ -24,7 +24,7 @@ namespace Game_Store_Management_System
         private void showAllUsers()
         {
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT username AS Username,name As Name,type AS Type FROM Staff;";
+            cmd2.CommandText = "SELECT username AS Username,FName As 'First name', LName As 'Last name',type AS Type FROM Staff WHERE Username != 'sys';";
 
             try
             {
@@ -53,7 +53,7 @@ namespace Game_Store_Management_System
         private bool validateAddNewUserForm()
         {
             string Username = txtUsername.Text;
-            string Name = txtName.Text;
+            string FName = txtName.Text;
             string Password = frmLogin.GetHashString(txtPassword.Text);
             string Type = cmbType.Text;
 
@@ -69,7 +69,7 @@ namespace Game_Store_Management_System
             if (Name.Trim().Length < 3)
             {
 
-                MessageBox.Show("Please enter more than 3 characters for the Name.");
+                MessageBox.Show("Please enter more than 3 characters for the FName.");
 
                 return false;
 
@@ -92,7 +92,7 @@ namespace Game_Store_Management_System
         private bool validateEditUserForm()
         {
             string Username = txtUsername.Text;
-            string Name = txtName.Text;
+            string FName = txtName.Text;
             string Password = frmLogin.GetHashString(txtPassword.Text);
             string Type = cmbType.Text;
 
@@ -108,7 +108,7 @@ namespace Game_Store_Management_System
             if (Name.Trim().Length < 3)
             {
 
-                MessageBox.Show("Please enter more than 3 characters for the Name.");
+                MessageBox.Show("Please enter more than 3 characters for the FName.");
 
                 return false;
 
@@ -137,15 +137,17 @@ namespace Game_Store_Management_System
             {
 
                 string Username = txtUsername.Text;
-                string Name = txtName.Text;
+                string FName = txtName.Text;
+                string LName = txtLName.Text;
                 string Password = frmLogin.GetHashString(txtPassword.Text);
                 string Type = cmbType.Text;
 
 
                 SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-                cmd.CommandText = "INSERT INTO Staff VALUES(@Username,@Password,@Name,@Type)";
+                cmd.CommandText = "INSERT INTO Staff VALUES(@Username,@Password,@FName,@LName,@Type)";
                 cmd.Parameters.AddWithValue("Username", Username.Trim());
-                cmd.Parameters.AddWithValue("Name", Name.Trim());
+                cmd.Parameters.AddWithValue("FName", FName.Trim());
+                cmd.Parameters.AddWithValue("LName", LName.Trim());
                 cmd.Parameters.AddWithValue("Password", Password);
                 cmd.Parameters.AddWithValue("Type", Type);
                 try
@@ -154,6 +156,7 @@ namespace Game_Store_Management_System
 
                     txtUsername.Text = "";
                     txtName.Text = "";
+                    txtLName.Text = "";
                     txtPassword.Text = "";
 
 
@@ -176,18 +179,24 @@ namespace Game_Store_Management_System
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string Username = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[0].Value.ToString();
-            string Name = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[1].Value.ToString();
-            string Type = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[2].Value.ToString();
+            string FName =   dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[1].Value.ToString();
+            string LName =  dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[2].Value.ToString();
+            string Type =   dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[3].Value.ToString();
 
-            if (frmLogin.userUsername == Username)
+            if (Username == "sys")
             {
 
-                MessageBox.Show("You can not delet youself");
+                MessageBox.Show("This account cannot be deleted");
+            }
+            else if (frmLogin.userUsername == Username)
+            {
+
+                MessageBox.Show("You can not delete youself");
             }
             else
             {
 
-                if (MessageBox.Show("Are you sure you want to delete this user?\n\nUsername\t=" + Username + "\nName\t=" + Name + "\nType\t=" + Type, "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Are you sure you want to delete this user?\n\nUsername\t=" + Username + "\nName\t=" + FName + "\nType\t=" + Type, "title", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
 
                     SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
@@ -215,7 +224,8 @@ namespace Game_Store_Management_System
 
             int i;
             string Username = txtUsername.Text;
-            string Name = txtName.Text;
+            string FName = txtName.Text;
+            string LName = txtLName.Text;
             string Password = frmLogin.GetHashString(txtPassword.Text);
             string Type = cmbType.Text;
 
@@ -227,21 +237,19 @@ namespace Game_Store_Management_System
 
                 if (ckPass.Checked == true)
                 {
-
-
-                    cmd.CommandText = "Update Staff SET Name=@Name, Password=@Password,Type=@Type WHERE Username=@Username;";
+                    cmd.CommandText = "Update Staff SET Username=@Username, FName=@FName,LName=@LName, Password=@Password,Type=@Type WHERE Username=@Username;";
                     cmd.Parameters.AddWithValue("Password", Password);
                 }
-                else if (ckPass.Checked == false)
+                else if  (ckPass.Checked == false) //txtPassword.Text.Trim()!=""
                 {
 
-
-                    cmd.CommandText = "Update Staff SET Name=@Name,Type=@Type WHERE Username=@Username;";
+                    cmd.CommandText = "Update Staff SET Username=@Username, FName=@FName, LName=@LName,Type=@Type WHERE Username=@Username;";
                 }
 
 
                 cmd.Parameters.AddWithValue("Username", Username.Trim());
-                cmd.Parameters.AddWithValue("Name", Name.Trim());
+                cmd.Parameters.AddWithValue("FName", FName.Trim());
+                cmd.Parameters.AddWithValue("LName", LName.Trim());
                 cmd.Parameters.AddWithValue("Type", Type);
                 try
                 {
@@ -251,6 +259,7 @@ namespace Game_Store_Management_System
 
                     txtUsername.Text = "";
                     txtName.Text = "";
+                    txtLName.Text = "";
                     txtPassword.Text = "";
 
 
@@ -277,7 +286,8 @@ namespace Game_Store_Management_System
         {
             string search = txtSearch.Text;
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT Username AS Username,name As Name,type AS Type FROM Staff WHERE Username LIKE @Search or Name LIKE @Search or type LIKE @Search;";
+            cmd2.CommandText = @"SELECT Username AS Username,FName As 'First Fname',LName As 'Last name',type AS 
+                                 Type FROM Staff WHERE Username LIKE @Search or FName LIKE @Search or LName LIKE @Search or type LIKE @Search AND Username != 'sys';";
 
             cmd2.Parameters.AddWithValue("@Search","%" + search + "%");
             try
@@ -322,8 +332,11 @@ namespace Game_Store_Management_System
             btnSave.Visible = true;
 
             txtName.Text = "";
+            txtLName.Text = "";
             txtPassword.Text = "";
             txtUsername.Text = "";
+
+            txtPassword.Enabled = true; 
         }
 
 
@@ -334,11 +347,13 @@ namespace Game_Store_Management_System
             btnAdd.Visible = false;
             btnEdit.Visible = false;
             string Username = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[0].Value.ToString();
-            string Name = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[1].Value.ToString();
-            string Type = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[2].Value.ToString();
+            string FName = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[1].Value.ToString();
+            string LName = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[2].Value.ToString();
+            string Type = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[3].Value.ToString();
 
             txtUsername.Text = Username;
-            txtName.Text = Name;
+            txtName.Text = FName;
+            txtLName.Text = LName;
             txtPassword.Text = "";
             cmbType.Text = Type;
 
@@ -347,8 +362,19 @@ namespace Game_Store_Management_System
             btnSave.Visible = false;
             btnUpdate.Visible = true;
 
-            txtUsername.Enabled = false;
+            txtUsername.Enabled = true;
         }
 
+        private void ckPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckPass.Checked)
+            {
+                txtPassword.Enabled = true;
+            }else
+            {
+                txtPassword.Enabled = false;
+
+            }
+        }
     }
 }
