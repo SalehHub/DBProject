@@ -292,7 +292,7 @@
             this.MinimumSize = new System.Drawing.Size(700, 400);
             this.Name = "frmItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmItems";
+            this.Text = "Games";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmItems_Load);
             this.gbadd.ResumeLayout(false);

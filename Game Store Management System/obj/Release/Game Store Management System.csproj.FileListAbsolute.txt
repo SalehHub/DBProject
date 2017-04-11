@@ -1,0 +1,14 @@
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Release\Game Store Management System.exe.config
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Release\Game Store Management System.exe
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Release\Game Store Management System.pdb
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game_Store_Management_System.frmCustomers.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game_Store_Management_System.frmItems.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game_Store_Management_System.frmLogin.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game_Store_Management_System.frmDashboard.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game_Store_Management_System.frmLoginRecords.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game_Store_Management_System.frmOrders.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game_Store_Management_System.Properties.Resources.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game_Store_Management_System.frmUsers.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game Store Management System.csproj.GenerateResource.Cache
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game Store Management System.exe
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Release\Game Store Management System.pdb

@@ -30,7 +30,7 @@ namespace Game_Store_Management_System
             if (frmLogin.userUsername == "sys")
             {
 
-                this.BackColor = Color.Navy;
+                this.BackColor = Color.DarkGray;
 
 
             }
@@ -77,6 +77,12 @@ namespace Game_Store_Management_System
         private void btnManageItems_Click(object sender, EventArgs e)
         {
             frmItems frm = new frmItems();
+            frm.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmOrders frm = new frmOrders();
             frm.ShowDialog();
         }
     }

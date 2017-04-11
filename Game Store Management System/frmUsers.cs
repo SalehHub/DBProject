@@ -222,8 +222,10 @@ namespace Game_Store_Management_System
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
-            int i;
+            //int i;
             string Username = txtUsername.Text;
+            string OldUsername = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[0].Value.ToString();
+
             string FName = txtName.Text;
             string LName = txtLName.Text;
             string Password = frmLogin.GetHashString(txtPassword.Text);
@@ -237,23 +239,24 @@ namespace Game_Store_Management_System
 
                 if (ckPass.Checked == true)
                 {
-                    cmd.CommandText = "Update Staff SET Username=@Username, FName=@FName,LName=@LName, Password=@Password,Type=@Type WHERE Username=@Username;";
+                    cmd.CommandText = "Update Staff SET Username=@Username, FName=@FName,LName=@LName, Password=@Password,Type=@Type WHERE Username=@OldUsername;";
                     cmd.Parameters.AddWithValue("Password", Password);
                 }
                 else if  (ckPass.Checked == false) //txtPassword.Text.Trim()!=""
                 {
 
-                    cmd.CommandText = "Update Staff SET Username=@Username, FName=@FName, LName=@LName,Type=@Type WHERE Username=@Username;";
+                    cmd.CommandText = "Update Staff SET Username=@Username, FName=@FName, LName=@LName,Type=@Type WHERE Username=@OldUsername;";
                 }
 
 
+                cmd.Parameters.AddWithValue("OldUsername", OldUsername);
                 cmd.Parameters.AddWithValue("Username", Username.Trim());
                 cmd.Parameters.AddWithValue("FName", FName.Trim());
                 cmd.Parameters.AddWithValue("LName", LName.Trim());
                 cmd.Parameters.AddWithValue("Type", Type);
                 try
                 {
-                    i = cmd.ExecuteNonQuery();
+                   cmd.ExecuteNonQuery();
 
                     //MessageBox.Show(i.ToString());
 
@@ -286,9 +289,10 @@ namespace Game_Store_Management_System
         {
             string search = txtSearch.Text;
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = @"SELECT Username AS Username,FName As 'First Fname',LName As 'Last name',type AS 
-                                 Type FROM Staff WHERE Username LIKE @Search or FName LIKE @Search or LName LIKE @Search or type LIKE @Search AND Username != 'sys';";
-
+            cmd2.CommandText = @"Select Username AS Username,FName As 'First name',LName As 'Last name',type AS
+                                 Type from staff where Username != 'sys'AND (Username LIKE @Search or FName LIKE @Search or
+                                LName LIKE @Search or type LIKE @Search);";
+       
             cmd2.Parameters.AddWithValue("@Search","%" + search + "%");
             try
             {
@@ -375,6 +379,11 @@ namespace Game_Store_Management_System
                 txtPassword.Enabled = false;
 
             }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
