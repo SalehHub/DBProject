@@ -45,6 +45,7 @@
             this.txtCusID = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblInovice = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrderList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             this.txtGameID.TabIndex = 0;
             this.txtGameID.TextChanged += new System.EventHandler(this.txtGameID_TextChanged);
             this.txtGameID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGameID_KeyDown);
+            this.txtGameID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGameID_KeyPress);
             // 
             // label1
             // 
@@ -81,6 +83,9 @@
             // 
             // grdOrderList
             // 
+            this.grdOrderList.AllowUserToAddRows = false;
+            this.grdOrderList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grdOrderList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdOrderList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.grdOrderList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -92,11 +97,11 @@
             this.Quantity,
             this.Price});
             this.grdOrderList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.grdOrderList.Location = new System.Drawing.Point(17, 289);
+            this.grdOrderList.Location = new System.Drawing.Point(17, 276);
             this.grdOrderList.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.grdOrderList.Name = "grdOrderList";
             this.grdOrderList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.grdOrderList.Size = new System.Drawing.Size(1331, 325);
+            this.grdOrderList.Size = new System.Drawing.Size(1202, 345);
             this.grdOrderList.TabIndex = 3;
             this.grdOrderList.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdOrderList_CellValueChanged);
             // 
@@ -137,7 +142,7 @@
             // 
             // btnCheckout
             // 
-            this.btnCheckout.Location = new System.Drawing.Point(1119, 628);
+            this.btnCheckout.Location = new System.Drawing.Point(17, 628);
             this.btnCheckout.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(153, 62);
@@ -182,10 +187,13 @@
             this.txtCusID.Name = "txtCusID";
             this.txtCusID.Size = new System.Drawing.Size(244, 39);
             this.txtCusID.TabIndex = 7;
+            this.txtCusID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCusID_KeyPress);
             // 
             // txtTotal
             // 
-            this.txtTotal.Location = new System.Drawing.Point(844, 641);
+            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Location = new System.Drawing.Point(997, 631);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(222, 39);
             this.txtTotal.TabIndex = 9;
@@ -193,17 +201,29 @@
             // lblInovice
             // 
             this.lblInovice.AutoSize = true;
-            this.lblInovice.Location = new System.Drawing.Point(602, 664);
+            this.lblInovice.Location = new System.Drawing.Point(222, 644);
             this.lblInovice.Name = "lblInovice";
             this.lblInovice.Size = new System.Drawing.Size(137, 33);
             this.lblInovice.TabIndex = 10;
             this.lblInovice.Text = "Invoice_no";
+            this.lblInovice.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(912, 637);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 33);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Total:";
             // 
             // frmOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1359, 765);
+            this.ClientSize = new System.Drawing.Size(1236, 765);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblInovice);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label3);
@@ -245,5 +265,6 @@
         private System.Windows.Forms.TextBox txtCusID;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblInovice;
+        private System.Windows.Forms.Label label4;
     }
 }
