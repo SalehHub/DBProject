@@ -31,3 +31,7 @@ C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.csprojResolveAssemblyReference.cache
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\DB\GameStore.mdf
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\DB\GameStore_log.ldf
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\RdlCompile.cache
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\RdlCompile.compiled
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmInvoice.resources

@@ -58,5 +58,16 @@ namespace Game_Store_Management_System.Properties {
                 this["Type"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=SAZ-PC;Initial Catalog=GameStore2;Integrated Security=True;Pooling=Fa" +
+            "lse")]
+        public string GameStore2ConnectionString {
+            get {
+                return ((string)(this["GameStore2ConnectionString"]));
+            }
+        }
     }
 }

@@ -35,17 +35,19 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnManageItems
             // 
             this.btnManageItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnManageItems.Location = new System.Drawing.Point(395, 175);
+            this.btnManageItems.Location = new System.Drawing.Point(395, 267);
             this.btnManageItems.Name = "btnManageItems";
             this.btnManageItems.Size = new System.Drawing.Size(274, 74);
             this.btnManageItems.TabIndex = 0;
-            this.btnManageItems.Text = "Manage Games";
+            this.btnManageItems.Text = "Games";
             this.btnManageItems.UseVisualStyleBackColor = true;
             this.btnManageItems.Click += new System.EventHandler(this.btnManageItems_Click);
             // 
@@ -53,11 +55,11 @@
             // 
             this.btnManageUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnManageUsers.Location = new System.Drawing.Point(395, 255);
+            this.btnManageUsers.Location = new System.Drawing.Point(395, 347);
             this.btnManageUsers.Name = "btnManageUsers";
             this.btnManageUsers.Size = new System.Drawing.Size(274, 74);
             this.btnManageUsers.TabIndex = 1;
-            this.btnManageUsers.Text = "Manage Staffs";
+            this.btnManageUsers.Text = "Staff";
             this.btnManageUsers.UseVisualStyleBackColor = true;
             this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
@@ -65,19 +67,17 @@
             // 
             this.btnManageCust.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnManageCust.Location = new System.Drawing.Point(395, 95);
+            this.btnManageCust.Location = new System.Drawing.Point(395, 187);
             this.btnManageCust.Name = "btnManageCust";
             this.btnManageCust.Size = new System.Drawing.Size(274, 74);
             this.btnManageCust.TabIndex = 2;
-            this.btnManageCust.Text = "Manage Customers";
+            this.btnManageCust.Text = "Customers";
             this.btnManageCust.UseVisualStyleBackColor = true;
             this.btnManageCust.Click += new System.EventHandler(this.btnManageCust_Click);
             // 
             // btnshowLoginRecords
             // 
-            this.btnshowLoginRecords.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnshowLoginRecords.Location = new System.Drawing.Point(395, 335);
+            this.btnshowLoginRecords.Location = new System.Drawing.Point(18, 427);
             this.btnshowLoginRecords.Name = "btnshowLoginRecords";
             this.btnshowLoginRecords.Size = new System.Drawing.Size(274, 74);
             this.btnshowLoginRecords.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             this.lblWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblWelcome.Location = new System.Drawing.Point(12, 41);
+            this.lblWelcome.Location = new System.Drawing.Point(12, 134);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(1041, 33);
             this.lblWelcome.TabIndex = 4;
@@ -99,7 +99,7 @@
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(872, 95);
+            this.btnLogout.Location = new System.Drawing.Point(928, 130);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(125, 40);
             this.btnLogout.TabIndex = 5;
@@ -111,19 +111,42 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(395, 415);
+            this.button1.Location = new System.Drawing.Point(395, 427);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(274, 74);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Manage Staffs";
+            this.button1.Text = "Orders";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(779, 427);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(274, 74);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Sales Statistics";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1065, 92);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Game Store Managment System";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 601);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblWelcome);
@@ -153,5 +176,7 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
     }
 }

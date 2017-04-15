@@ -85,5 +85,14 @@ namespace Game_Store_Management_System
             frmOrders frm = new frmOrders();
             frm.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+
+            frmInvoice frmInvoice = new frmInvoice();
+            frmInvoice.ShowDialog();
+            
+        }
     }
 }

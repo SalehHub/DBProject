@@ -27,7 +27,13 @@ namespace Game_Store_Management_System
         }
         private void frmOrders_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'GameStore2DataSet.DataTable2' table. You can move, or remove it, as needed.
+            this.DataTable2TableAdapter.ListOfOrders(this.GameStore2DataSet.DataTable2 , DateTime.Parse("01/01/2017"),DateTime.Parse("12/31/2017"));
+            // TODO: This line of code loads data into the 'GameStore2DataSet.Orders' table. You can move, or remove it, as needed.
+
+            this.reportViewer1.RefreshReport();
+
+            this.reportViewer1.RefreshReport();
         }
 
         private void txtGameID_TextChanged(object sender, EventArgs e)
@@ -39,7 +45,7 @@ namespace Game_Store_Management_System
         {
 
 
-            if (txtGameID.Text.Trim() == "" || int.Parse(txtGameID.Text.Trim()) == 0)
+            if (txtGameID.Text.Trim() == "" )
             {
 
                 MessageBox.Show("Please enter a valid Game ID");
@@ -131,7 +137,16 @@ namespace Game_Store_Management_System
             {
                 if (createInvoice())
                 {
-                    createOrders();
+                    if (!createOrders())
+                    {
+                        DeleteInvoice(lblInovice.Text);
+                    }else
+                    {
+
+                        frmInvoice frmInvoice = new frmInvoice();
+                        frmInvoice.Invoice_NO = lblInovice.Text;
+                        frmInvoice.ShowDialog();
+                    }
                 }
             }
         }
@@ -206,7 +221,7 @@ namespace Game_Store_Management_System
             }
         }
 
-        public void createOrders()
+        public bool createOrders()
         {
             string Invoice_NO = lblInovice.Text;
 
@@ -226,13 +241,17 @@ namespace Game_Store_Management_System
                 try
                 {
                     cmd.ExecuteNonQuery();
+                   // return true;
 
                 }
                 catch (SqlException ex)
                 {
                     MessageBox.Show(ex.Message);
+                    return false;
                 }
             }
+
+            return true;
         }
 
         public bool IsTheCustomerExist(string ID)
@@ -287,6 +306,23 @@ namespace Game_Store_Management_System
             }
         }
 
+
+        public void DeleteInvoice(string Invoice_NO)
+        {
+            SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
+            cmd.CommandText = "Delete FROM Invoice WHERE Invoice_NO = @Invoice_NO";
+
+            cmd.Parameters.AddWithValue("Invoice_NO", int.Parse(Invoice_NO));
+            try
+            {
+                cmd.ExecuteScalar();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void txtCusID_KeyPress(object sender, KeyPressEventArgs e)
         {
             char keypress = e.KeyChar;
@@ -303,6 +339,70 @@ namespace Game_Store_Management_System
             {
                 e.Handled = true;
             }
+        }
+
+
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+            
+            if (grdOrderList.CurrentRow != null)
+            {
+                grdOrderList.Rows.RemoveAt(grdOrderList.CurrentRow.Index);
+            }else
+            {
+
+                MessageBox.Show("Please select a game to delete!");
+            }
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+
+            if (txtCusID.Text.Trim() != "")
+            {
+
+                string CusID = txtCusID.Text.Trim();
+
+                string FName = "";
+                string LName = "";
+                string Email = "";
+
+
+                SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
+                cmd2.CommandText = "SELECT * FROM Customer WHERE ID = @CusID;";
+                cmd2.Parameters.AddWithValue("CusID", CusID);
+
+                try
+                {
+                    SqlDataReader reader2 = cmd2.ExecuteReader();
+
+
+                    if (reader2.Read())
+                    {
+
+                        FName = reader2[1].ToString();
+                        LName = reader2[2].ToString();
+                        Email = reader2[3].ToString();
+
+
+                        lblCustInfo.Text = "First name:" + FName + "\nLast name:" + LName + "\nEmail:" + Email;
+
+                    }
+
+                    reader2.Close();
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }
