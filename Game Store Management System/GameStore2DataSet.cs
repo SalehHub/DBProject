@@ -2,14 +2,22 @@
 {
 
 
-    partial class GameStore2DataSet
+    partial class DSOrdersReport
     {
     }
 }
 
-namespace Game_Store_Management_System.GameStore2DataSetTableAdapters {
-    
-    
-    public partial class OrdersTableAdapter {
+namespace Game_Store_Management_System.DSOrdersReportTableAdapters
+{
+    partial class dtOrderCusAndDateTableAdapter
+    {
+    }
+
+    partial class dtOrdersReportTableAdapter
+    {
+    }
+
+    public partial class OrdersTableAdapter
+    {
     }
 }

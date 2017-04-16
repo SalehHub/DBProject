@@ -94,5 +94,19 @@ namespace Game_Store_Management_System
             frmInvoice.ShowDialog();
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmReport frm = new frmReport();
+            frm.ShowDialog(); 
+        }
+
+
+
+        private void btnGraph_Click(object sender, EventArgs e)
+        {
+            frmGraph frm = new frmGraph();
+            frm.ShowDialog();
+        }
     }
 }

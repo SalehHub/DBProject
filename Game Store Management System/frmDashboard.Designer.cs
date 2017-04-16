@@ -37,6 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnGraph = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManageItems
@@ -77,7 +78,7 @@
             // 
             // btnshowLoginRecords
             // 
-            this.btnshowLoginRecords.Location = new System.Drawing.Point(18, 427);
+            this.btnshowLoginRecords.Location = new System.Drawing.Point(32, 187);
             this.btnshowLoginRecords.Name = "btnshowLoginRecords";
             this.btnshowLoginRecords.Size = new System.Drawing.Size(274, 74);
             this.btnshowLoginRecords.TabIndex = 3;
@@ -122,12 +123,13 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(779, 427);
+            this.button2.Location = new System.Drawing.Point(525, 586);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(274, 74);
             this.button2.TabIndex = 7;
             this.button2.Text = "Sales Statistics";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label3
             // 
@@ -140,11 +142,22 @@
             this.label3.Text = "Game Store Managment System";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnGraph
+            // 
+            this.btnGraph.Location = new System.Drawing.Point(223, 586);
+            this.btnGraph.Name = "btnGraph";
+            this.btnGraph.Size = new System.Drawing.Size(274, 74);
+            this.btnGraph.TabIndex = 9;
+            this.btnGraph.Text = "Graph";
+            this.btnGraph.UseVisualStyleBackColor = true;
+            this.btnGraph.Click += new System.EventHandler(this.btnGraph_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1065, 601);
+            this.ClientSize = new System.Drawing.Size(1065, 689);
+            this.Controls.Add(this.btnGraph);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -178,5 +191,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnGraph;
     }
 }

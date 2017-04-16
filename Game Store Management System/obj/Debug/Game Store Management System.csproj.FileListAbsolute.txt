@@ -14,24 +14,25 @@ D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game Store Ma
 D:\iBraHem\GitHub\DBProject\Game Store Management System\obj\Debug\Game Store Management System.pdb
 D:\iBraHem\GitHub\DBProject\Game Store Management System\bin\Debug\DB\GameStore.mdf
 D:\iBraHem\GitHub\DBProject\Game Store Management System\bin\Debug\DB\GameStore_log.ldf
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\DB\GameStore.mdf
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\DB\GameStore_log.ldf
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\Game Store Management System.exe.config
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\Game Store Management System.exe
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\Game Store Management System.pdb
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmCustomers.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmGraph.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmInvoice.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmItems.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmLogin.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmDashboard.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmLoginRecords.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmOrders.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmReport.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.Properties.Resources.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmUsers.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.csproj.GenerateResource.Cache
-C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.exe
-C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.pdb
-C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmOrders.resources
-C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.csprojResolveAssemblyReference.cache
-C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\DB\GameStore.mdf
-C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\DB\GameStore_log.ldf
-C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\RdlCompile.cache
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\RdlCompile.compiled
-C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmInvoice.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.exe
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.pdb

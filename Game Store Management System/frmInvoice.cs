@@ -33,5 +33,10 @@ namespace Game_Store_Management_System
         {
 
         }
+
+        private void repInvoice_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

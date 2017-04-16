@@ -27,13 +27,7 @@ namespace Game_Store_Management_System
         }
         private void frmOrders_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'GameStore2DataSet.DataTable2' table. You can move, or remove it, as needed.
-            this.DataTable2TableAdapter.ListOfOrders(this.GameStore2DataSet.DataTable2 , DateTime.Parse("01/01/2017"),DateTime.Parse("12/31/2017"));
-            // TODO: This line of code loads data into the 'GameStore2DataSet.Orders' table. You can move, or remove it, as needed.
 
-            this.reportViewer1.RefreshReport();
-
-            this.reportViewer1.RefreshReport();
         }
 
         private void txtGameID_TextChanged(object sender, EventArgs e)
@@ -142,16 +136,29 @@ namespace Game_Store_Management_System
                         DeleteInvoice(lblInovice.Text);
                     }else
                     {
-
                         frmInvoice frmInvoice = new frmInvoice();
                         frmInvoice.Invoice_NO = lblInovice.Text;
                         frmInvoice.ShowDialog();
+                        ClearTheForm();
+
                     }
                 }
             }
         }
 
+        public void ClearTheForm()
+        {
+            txtCusID.Text = "";
+            lblCustInfo.Text = "";
+            lblInovice.Text = "";
 
+            txtGameID.Text = "";
+            txtQu.Text = "1";
+
+            txtTotal.Text = "";
+
+            grdOrderList.Rows.Clear();
+        }
         public bool Validation()
         {
 
@@ -325,6 +332,11 @@ namespace Game_Store_Management_System
 
         private void txtCusID_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar==Convert.ToChar(Keys.Enter))
+            {
+                btnFind_Click(sender, e);
+
+            }
             char keypress = e.KeyChar;
             if (!char.IsDigit(keypress) && e.KeyChar != Convert.ToChar(Keys.Back))
             {
@@ -360,7 +372,15 @@ namespace Game_Store_Management_System
         private void btnFind_Click(object sender, EventArgs e)
         {
 
-            if (txtCusID.Text.Trim() != "")
+            if (txtCusID.Text.Trim() == "")
+            {
+                MessageBox.Show("Please enter a customer ID");
+            }
+            else if (!IsTheCustomerExist(txtCusID.Text.Trim()))
+            {
+                MessageBox.Show("Customer not found!");
+            }
+            else
             {
 
                 string CusID = txtCusID.Text.Trim();

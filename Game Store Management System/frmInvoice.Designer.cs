@@ -51,6 +51,7 @@
             this.repInvoice.Name = "repInvoice";
             this.repInvoice.Size = new System.Drawing.Size(642, 556);
             this.repInvoice.TabIndex = 0;
+            this.repInvoice.Load += new System.EventHandler(this.repInvoice_Load);
             // 
             // InvoiceDataTableBindingSource
             // 

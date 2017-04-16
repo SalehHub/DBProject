@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.DataTable2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.GameStore2DataSet = new Game_Store_Management_System.GameStore2DataSet();
             this.txtGameID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -53,26 +49,8 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
             this.lblCustInfo = new System.Windows.Forms.Label();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.OrdersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.OrdersTableAdapter = new Game_Store_Management_System.GameStore2DataSetTableAdapters.OrdersTableAdapter();
-            this.DataTable2TableAdapter = new Game_Store_Management_System.GameStore2DataSetTableAdapters.DataTable2TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GameStore2DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrderList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DataTable2BindingSource
-            // 
-            this.DataTable2BindingSource.DataMember = "DataTable2";
-            this.DataTable2BindingSource.DataSource = this.GameStore2DataSet;
-            // 
-            // GameStore2DataSet
-            // 
-            this.GameStore2DataSet.DataSetName = "GameStore2DataSet";
-            this.GameStore2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txtGameID
             // 
@@ -198,7 +176,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(491, 58);
+            this.label3.Location = new System.Drawing.Point(491, 60);
             this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 33);
@@ -207,7 +185,7 @@
             // 
             // txtCusID
             // 
-            this.txtCusID.Location = new System.Drawing.Point(664, 58);
+            this.txtCusID.Location = new System.Drawing.Point(664, 57);
             this.txtCusID.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtCusID.Name = "txtCusID";
             this.txtCusID.Size = new System.Drawing.Size(244, 39);
@@ -255,9 +233,9 @@
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(919, 58);
+            this.btnFind.Location = new System.Drawing.Point(919, 55);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(75, 39);
+            this.btnFind.Size = new System.Drawing.Size(75, 42);
             this.btnFind.TabIndex = 13;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
@@ -272,41 +250,11 @@
             this.lblCustInfo.TabIndex = 14;
             this.lblCustInfo.Text = "Customer Info";
             // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
-            // reportViewer1
-            // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable2BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Game_Store_Management_System.Report2.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(349, 179);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(718, 446);
-            this.reportViewer1.TabIndex = 15;
-            this.reportViewer1.Visible = false;
-            // 
-            // OrdersBindingSource
-            // 
-            this.OrdersBindingSource.DataMember = "Orders";
-            this.OrdersBindingSource.DataSource = this.GameStore2DataSet;
-            // 
-            // OrdersTableAdapter
-            // 
-            this.OrdersTableAdapter.ClearBeforeFill = true;
-            // 
-            // DataTable2TableAdapter
-            // 
-            this.DataTable2TableAdapter.ClearBeforeFill = true;
-            // 
             // frmOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1236, 765);
-            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.lblCustInfo);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.btnDel);
@@ -325,12 +273,11 @@
             this.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "frmOrders";
-            this.Text = "frmOrders";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Orders";
             this.Load += new System.EventHandler(this.frmOrders_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GameStore2DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOrderList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,12 +306,5 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Label lblCustInfo;
-        private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Windows.Forms.BindingSource OrdersBindingSource;
-        private GameStore2DataSet GameStore2DataSet;
-        private GameStore2DataSetTableAdapters.OrdersTableAdapter OrdersTableAdapter;
-        private System.Windows.Forms.BindingSource DataTable2BindingSource;
-        private GameStore2DataSetTableAdapters.DataTable2TableAdapter DataTable2TableAdapter;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }
