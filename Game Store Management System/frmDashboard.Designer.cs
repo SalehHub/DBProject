@@ -38,6 +38,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGraph = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManageItems
@@ -110,24 +111,22 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(395, 427);
+            this.button1.Location = new System.Drawing.Point(237, 427);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(274, 74);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Orders";
+            this.button1.Text = "Add Orders";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(525, 586);
+            this.button2.Location = new System.Drawing.Point(539, 586);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(274, 74);
             this.button2.TabIndex = 7;
-            this.button2.Text = "Sales Statistics";
+            this.button2.Text = "Reports";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -144,7 +143,7 @@
             // 
             // btnGraph
             // 
-            this.btnGraph.Location = new System.Drawing.Point(223, 586);
+            this.btnGraph.Location = new System.Drawing.Point(237, 586);
             this.btnGraph.Name = "btnGraph";
             this.btnGraph.Size = new System.Drawing.Size(274, 74);
             this.btnGraph.TabIndex = 9;
@@ -152,11 +151,23 @@
             this.btnGraph.UseVisualStyleBackColor = true;
             this.btnGraph.Click += new System.EventHandler(this.btnGraph_Click);
             // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(539, 427);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(274, 74);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Edit Orders";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 689);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGraph);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
@@ -169,6 +180,7 @@
             this.Controls.Add(this.btnManageItems);
             this.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MinimumSize = new System.Drawing.Size(1083, 736);
             this.Name = "frmDashboard";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -192,5 +204,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGraph;
+        private System.Windows.Forms.Button button3;
     }
 }

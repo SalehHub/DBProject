@@ -65,6 +65,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSetEditOrders.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEditOrders.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSInvoice.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -75,6 +80,18 @@
     </Compile>
     <Compile Include="frmCustomers.Designer.cs">
       <DependentUpon>frmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditOrder.Designer.cs">
+      <DependentUpon>frmEditOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditOrders.Designer.cs">
+      <DependentUpon>frmEditOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGraph.cs">
       <SubType>Form</SubType>
@@ -148,6 +165,12 @@
     <EmbeddedResource Include="frmCustomers.resx">
       <DependentUpon>frmCustomers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditOrder.resx">
+      <DependentUpon>frmEditOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditOrders.resx">
+      <DependentUpon>frmEditOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGraph.resx">
       <DependentUpon>frmGraph.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +213,17 @@
     <EmbeddedResource Include="CustOrders.rdlc" />
     <EmbeddedResource Include="CustAndDatesOrders.rdlc" />
     <EmbeddedResource Include="Graph.rdlc" />
+    <None Include="DataSetEditOrders.xsc">
+      <DependentUpon>DataSetEditOrders.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetEditOrders.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEditOrders.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetEditOrders.xss">
+      <DependentUpon>DataSetEditOrders.xsd</DependentUpon>
+    </None>
     <None Include="DSInvoice.xsc">
       <DependentUpon>DSInvoice.xsd</DependentUpon>
     </None>

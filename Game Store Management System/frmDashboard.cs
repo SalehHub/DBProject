@@ -108,5 +108,16 @@ namespace Game_Store_Management_System
             frmGraph frm = new frmGraph();
             frm.ShowDialog();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            frmEditOrder frm = new frmEditOrder();
+            frm.ShowDialog();
+        }
     }
 }

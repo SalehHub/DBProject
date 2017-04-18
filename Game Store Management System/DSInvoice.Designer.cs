@@ -295,6 +295,10 @@ namespace Game_Store_Management_System {
             
             private global::System.Data.DataColumn columnPlatform;
             
+            private global::System.Data.DataColumn columnSFname;
+            
+            private global::System.Data.DataColumn columnSLname;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public InvoiceDataTableDataTable() {
@@ -394,6 +398,22 @@ namespace Game_Store_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SFnameColumn {
+                get {
+                    return this.columnSFname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SLnameColumn {
+                get {
+                    return this.columnSLname;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +449,7 @@ namespace Game_Store_Management_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public InvoiceDataTableRow AddInvoiceDataTableRow(string Name, int Quantity, decimal Price, int Game_ID, string FName, string LName, string Platform) {
+            public InvoiceDataTableRow AddInvoiceDataTableRow(string Name, int Quantity, decimal Price, int Game_ID, string FName, string LName, string Platform, string SFname, string SLname) {
                 InvoiceDataTableRow rowInvoiceDataTableRow = ((InvoiceDataTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Name,
@@ -439,7 +459,9 @@ namespace Game_Store_Management_System {
                         null,
                         FName,
                         LName,
-                        Platform};
+                        Platform,
+                        SFname,
+                        SLname};
                 rowInvoiceDataTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowInvoiceDataTableRow);
                 return rowInvoiceDataTableRow;
@@ -477,6 +499,8 @@ namespace Game_Store_Management_System {
                 this.columnFName = base.Columns["FName"];
                 this.columnLName = base.Columns["LName"];
                 this.columnPlatform = base.Columns["Platform"];
+                this.columnSFname = base.Columns["SFname"];
+                this.columnSLname = base.Columns["SLname"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -498,6 +522,10 @@ namespace Game_Store_Management_System {
                 base.Columns.Add(this.columnLName);
                 this.columnPlatform = new global::System.Data.DataColumn("Platform", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPlatform);
+                this.columnSFname = new global::System.Data.DataColumn("SFname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSFname);
+                this.columnSLname = new global::System.Data.DataColumn("SLname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSLname);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnInvoice_NO}, true));
                 this.columnName.AllowDBNull = false;
@@ -517,6 +545,9 @@ namespace Game_Store_Management_System {
                 this.columnLName.MaxLength = 50;
                 this.columnPlatform.AllowDBNull = false;
                 this.columnPlatform.MaxLength = 50;
+                this.columnSFname.AllowDBNull = false;
+                this.columnSFname.MaxLength = 250;
+                this.columnSLname.MaxLength = 250;
                 this.ExtendedProperties.Add("Generator_TablePropName", "_InvoiceDataTable");
                 this.ExtendedProperties.Add("Generator_UserTableName", "InvoiceDataTable");
             }
@@ -746,6 +777,45 @@ namespace Game_Store_Management_System {
                     this[this.tableInvoiceDataTable.PlatformColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SFname {
+                get {
+                    return ((string)(this[this.tableInvoiceDataTable.SFnameColumn]));
+                }
+                set {
+                    this[this.tableInvoiceDataTable.SFnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SLname {
+                get {
+                    try {
+                        return ((string)(this[this.tableInvoiceDataTable.SLnameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SLname\' in table \'InvoiceDataTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableInvoiceDataTable.SLnameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSLnameNull() {
+                return this.IsNull(this.tableInvoiceDataTable.SLnameColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSLnameNull() {
+                this[this.tableInvoiceDataTable.SLnameColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -915,6 +985,8 @@ namespace Game_Store_Management_System.DSInvoiceTableAdapters {
             tableMapping.ColumnMappings.Add("FName", "FName");
             tableMapping.ColumnMappings.Add("LName", "LName");
             tableMapping.ColumnMappings.Add("Platform", "Platform");
+            tableMapping.ColumnMappings.Add("SFname", "SFname");
+            tableMapping.ColumnMappings.Add("SLname", "SLname");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -931,7 +1003,7 @@ namespace Game_Store_Management_System.DSInvoiceTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT Orders.Game_ID, Game.Name, Game.Platform, Orders.Quantity, Orders.Price, Invoice.Invoice_NO, Customer.FName, Customer.LName
+            this._commandCollection[0].CommandText = @"SELECT Orders.Game_ID, Game.Name, Game.Platform, Orders.Quantity, Orders.Price, Invoice.Invoice_NO, Customer.FName, Customer.LName, Staff.FName AS SFname, Staff.LName AS SLname
 FROM     Orders INNER JOIN
                   Game ON Orders.Game_ID = Game.ID INNER JOIN
                   Customer INNER JOIN

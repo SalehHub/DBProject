@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dtOrderCusAndDateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DSOrdersReport = new Game_Store_Management_System.DSOrdersReport();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -70,9 +70,9 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource1.Name = "DSOrdersCusAndDate";
-            reportDataSource1.Value = this.dtOrderCusAndDateBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DSOrdersCusAndDate";
+            reportDataSource2.Value = this.dtOrderCusAndDateBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Game_Store_Management_System.Report4.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(15, 187);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(6);
@@ -143,6 +143,7 @@
             this.txtCusID.Name = "txtCusID";
             this.txtCusID.Size = new System.Drawing.Size(180, 39);
             this.txtCusID.TabIndex = 22;
+            this.txtCusID.TextChanged += new System.EventHandler(this.txtCusID_TextChanged);
             this.txtCusID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCusID_KeyPress);
             // 
             // cbDates

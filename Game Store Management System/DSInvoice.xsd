@@ -12,7 +12,7 @@
               <DbSource ConnectionRef="GameStore2ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="GetInvoice" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataInvoice" GeneratorSourceName="GetInvoice" GetMethodModifier="Public" GetMethodName="GetDataInvoice" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataInvoice" UserSourceName="GetInvoice">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT Orders.Game_ID, Game.Name, Game.Platform, Orders.Quantity, Orders.Price, Invoice.Invoice_NO, Customer.FName, Customer.LName
+                    <CommandText>SELECT Orders.Game_ID, Game.Name, Game.Platform, Orders.Quantity, Orders.Price, Invoice.Invoice_NO, Customer.FName, Customer.LName, Staff.FName AS SFname, Staff.LName AS SLname
 FROM     Orders INNER JOIN
                   Game ON Orders.Game_ID = Game.ID INNER JOIN
                   Customer INNER JOIN
@@ -35,6 +35,8 @@ WHERE  (Invoice.Invoice_NO = @Invoice_NO)</CommandText>
               <Mapping SourceColumn="FName" DataSetColumn="FName" />
               <Mapping SourceColumn="LName" DataSetColumn="LName" />
               <Mapping SourceColumn="Platform" DataSetColumn="Platform" />
+              <Mapping SourceColumn="SFname" DataSetColumn="SFname" />
+              <Mapping SourceColumn="SLname" DataSetColumn="SLname" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -46,7 +48,7 @@ WHERE  (Invoice.Invoice_NO = @Invoice_NO)</CommandText>
   <xs:element name="DSInvoice" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSInvoice" msprop:Generator_UserDSName="DSInvoice">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="InvoiceDataTable" msprop:Generator_TableClassName="InvoiceDataTableDataTable" msprop:Generator_TableVarName="tableInvoiceDataTable" msprop:Generator_RowChangedName="InvoiceDataTableRowChanged" msprop:Generator_TablePropName="_InvoiceDataTable" msprop:Generator_RowDeletingName="InvoiceDataTableRowDeleting" msprop:Generator_RowChangingName="InvoiceDataTableRowChanging" msprop:Generator_RowEvHandlerName="InvoiceDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceDataTableRowDeleted" msprop:Generator_RowClassName="InvoiceDataTableRow" msprop:Generator_UserTableName="InvoiceDataTable" msprop:Generator_RowEvArgName="InvoiceDataTableRowChangeEvent">
+        <xs:element name="InvoiceDataTable" msprop:Generator_TableClassName="InvoiceDataTableDataTable" msprop:Generator_TableVarName="tableInvoiceDataTable" msprop:Generator_TablePropName="_InvoiceDataTable" msprop:Generator_RowDeletingName="InvoiceDataTableRowDeleting" msprop:Generator_RowChangingName="InvoiceDataTableRowChanging" msprop:Generator_RowEvHandlerName="InvoiceDataTableRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceDataTableRowDeleted" msprop:Generator_UserTableName="InvoiceDataTable" msprop:Generator_RowChangedName="InvoiceDataTableRowChanged" msprop:Generator_RowEvArgName="InvoiceDataTableRowChangeEvent" msprop:Generator_RowClassName="InvoiceDataTableRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name">
@@ -78,6 +80,20 @@ WHERE  (Invoice.Invoice_NO = @Invoice_NO)</CommandText>
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SFname" msprop:Generator_ColumnVarNameInTable="columnSFname" msprop:Generator_ColumnPropNameInRow="SFname" msprop:Generator_ColumnPropNameInTable="SFnameColumn" msprop:Generator_UserColumnName="SFname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SLname" msprop:Generator_ColumnVarNameInTable="columnSLname" msprop:Generator_ColumnPropNameInRow="SLname" msprop:Generator_ColumnPropNameInTable="SLnameColumn" msprop:Generator_UserColumnName="SLname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

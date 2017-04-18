@@ -111,5 +111,10 @@ namespace Game_Store_Management_System
                 e.Handled = true;
             }
         }
+
+        private void txtCusID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

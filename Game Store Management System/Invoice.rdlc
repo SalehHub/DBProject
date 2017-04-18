@@ -424,8 +424,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSetInvoice</DataSetName>
-        <Top>1.53333in</Top>
-        <Left>0.30556in</Left>
+        <Top>1.79666in</Top>
+        <Left>0.30554in</Left>
         <Height>0.5in</Height>
         <Width>6in</Width>
         <Style>
@@ -454,8 +454,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox10</rd:DefaultName>
-        <Top>2.16667in</Top>
-        <Left>0.30556in</Left>
+        <Top>2.43in</Top>
+        <Left>0.30554in</Left>
         <Height>0.25in</Height>
         <Width>0.60278in</Width>
         <ZIndex>1</ZIndex>
@@ -488,8 +488,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Price1</rd:DefaultName>
-        <Top>2.16667in</Top>
-        <Left>0.97778in</Left>
+        <Top>2.43in</Top>
+        <Left>0.97776in</Left>
         <Height>0.25in</Height>
         <Width>2.32778in</Width>
         <ZIndex>2</ZIndex>
@@ -679,11 +679,77 @@
           </Border>
         </Style>
       </Line>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value EvaluationMode="Constant">Staff name:</Value>
+                <Style>
+                  <FontSize>15pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>1.50499in</Top>
+        <Left>0.30555in</Left>
+        <Height>0.25in</Height>
+        <Width>1.21945in</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Invoice_NO2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!SFname.Value, "DataSetInvoice")+" "+First(Fields!SLname.Value, "DataSetInvoice")</Value>
+                <Style>
+                  <FontSize>15pt</FontSize>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Invoice_NO</rd:DefaultName>
+        <Top>1.50499in</Top>
+        <Left>1.53889in</Left>
+        <Height>0.25in</Height>
+        <Width>1.76667in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>2.68in</Height>
+    <Height>2.73833in</Height>
     <Style />
   </Body>
-  <Width>6.61389in</Width>
+  <Width>6.655in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>
@@ -738,6 +804,14 @@
         </Field>
         <Field Name="Platform">
           <DataField>Platform</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SFname">
+          <DataField>SFname</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SLname">
+          <DataField>SLname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

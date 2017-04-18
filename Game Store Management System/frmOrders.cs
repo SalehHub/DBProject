@@ -131,16 +131,18 @@ namespace Game_Store_Management_System
             {
                 if (createInvoice())
                 {
-                    if (!createOrders())
+                    if (createOrders())
                     {
-                        DeleteInvoice(lblInovice.Text);
-                    }else
-                    {
+                        updateQuantity();
+
                         frmInvoice frmInvoice = new frmInvoice();
                         frmInvoice.Invoice_NO = lblInovice.Text;
+
                         frmInvoice.ShowDialog();
                         ClearTheForm();
-
+                    }else
+                    {
+                        DeleteInvoice(lblInovice.Text);
                     }
                 }
             }
@@ -248,7 +250,6 @@ namespace Game_Store_Management_System
                 try
                 {
                     cmd.ExecuteNonQuery();
-                   // return true;
 
                 }
                 catch (SqlException ex)
@@ -259,6 +260,31 @@ namespace Game_Store_Management_System
             }
 
             return true;
+        }
+
+        public void updateQuantity()
+        {
+            foreach (DataGridViewRow row in grdOrderList.Rows)
+            {
+                string Game_ID = row.Cells[0].Value.ToString();
+                string Quantity = row.Cells[4].Value.ToString();
+
+                SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
+                cmd.CommandText = "Update Game SET Quantity=Quantity-@Quantity WHERE ID=@Game_ID";
+
+                cmd.Parameters.AddWithValue("Game_ID", Game_ID);
+                cmd.Parameters.AddWithValue("Quantity", Quantity);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                   
+                }
+            }
         }
 
         public bool IsTheCustomerExist(string ID)

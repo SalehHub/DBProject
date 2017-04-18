@@ -25,18 +25,10 @@ namespace Game_Store_Management_System
             // TODO: This line of code loads data into the 'DSInvoice._InvoiceDataTable' table. You can move, or remove it, as needed.
             this.invoiceDataTableTableAdapter.GetInvoice(this.DSInvoice._InvoiceDataTable,int.Parse(Invoice_NO));
 
-            repInvoice.RefreshReport();          
-
+            repInvoice.RefreshReport();
+            this.Text = "Invoice#" + Invoice_NO;
+            repInvoice.LocalReport.DisplayName= "Invoice#" + Invoice_NO;
         }
 
-        private void CustomerBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void repInvoice_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

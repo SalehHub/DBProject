@@ -21,6 +21,8 @@ C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\Game Store Management System.pdb
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmCustomers.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmEditOrder.resources
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmEditOrders.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmGraph.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmInvoice.resources
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game_Store_Management_System.frmItems.resources
