@@ -32,7 +32,7 @@ namespace Game_Store_Management_System
 
             SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
 
-            cmd.CommandText = @"SELECT (Customer.FName + Customer.LName) AS 'Customer Name', Orders.Order_NO AS 'Order NO', Game.Name AS 'Game Name', Orders.Quantity, Orders.Price, Game.ID
+            cmd.CommandText = @"SELECT (Customer.FName +' '+ Customer.LName) AS 'Customer Name', Orders.Order_NO AS 'Order NO', Game.Name AS 'Game Name', Orders.Quantity, Orders.Price, Game.ID
                                   FROM Orders INNER JOIN
                                   Game ON Orders.Game_ID = Game.ID INNER JOIN
                                   Customer INNER JOIN
@@ -84,7 +84,6 @@ namespace Game_Store_Management_System
 
             if (NewQuantity != "")
             {
-                // MessageBox.Show(Order_NO + "  " + Quantity + " " + Price);
 
                 decimal UnitPrice = decimal.Parse(Price) / OldQuantity;
 
@@ -223,6 +222,11 @@ namespace Game_Store_Management_System
 
                 MessageBox.Show("Please enter an Invoice NO!");
             }
+        }
+
+        private void frmEditOrder_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

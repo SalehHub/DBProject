@@ -119,5 +119,11 @@ namespace Game_Store_Management_System
             frmEditOrder frm = new frmEditOrder();
             frm.ShowDialog();
         }
+
+        private void btnInvoices_Click(object sender, EventArgs e)
+        {
+            frmInvoices frm = new frmInvoices();
+            frm.ShowDialog();
+        }
     }
 }

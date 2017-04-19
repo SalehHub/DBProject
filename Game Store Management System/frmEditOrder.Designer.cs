@@ -47,7 +47,7 @@
             this.grdOrders.CausesValidation = false;
             this.grdOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdOrders.Location = new System.Drawing.Point(15, 128);
-            this.grdOrders.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.grdOrders.Margin = new System.Windows.Forms.Padding(6);
             this.grdOrders.Name = "grdOrders";
             this.grdOrders.RowTemplate.Height = 24;
             this.grdOrders.ShowCellErrors = false;
@@ -63,7 +63,7 @@
             // txtInvoiceNO
             // 
             this.txtInvoiceNO.Location = new System.Drawing.Point(28, 66);
-            this.txtInvoiceNO.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtInvoiceNO.Margin = new System.Windows.Forms.Padding(6);
             this.txtInvoiceNO.Name = "txtInvoiceNO";
             this.txtInvoiceNO.Size = new System.Drawing.Size(255, 39);
             this.txtInvoiceNO.TabIndex = 1;
@@ -72,7 +72,7 @@
             // btnFind
             // 
             this.btnFind.Location = new System.Drawing.Point(295, 52);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(6);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(159, 64);
             this.btnFind.TabIndex = 2;
@@ -83,7 +83,7 @@
             // btnDel
             // 
             this.btnDel.Location = new System.Drawing.Point(844, 52);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(6);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(204, 64);
             this.btnDel.TabIndex = 13;
@@ -123,8 +123,9 @@
             this.Controls.Add(this.txtInvoiceNO);
             this.Controls.Add(this.grdOrders);
             this.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmEditOrder";
+            this.Load += new System.EventHandler(this.frmEditOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

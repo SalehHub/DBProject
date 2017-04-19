@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnGraph = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnInvoices = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnManageItems
@@ -111,7 +112,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(237, 427);
+            this.button1.Location = new System.Drawing.Point(237, 506);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(274, 74);
             this.button1.TabIndex = 6;
@@ -154,7 +155,7 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(539, 427);
+            this.button3.Location = new System.Drawing.Point(539, 506);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(274, 74);
             this.button3.TabIndex = 16;
@@ -162,11 +163,24 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_2);
             // 
+            // btnInvoices
+            // 
+            this.btnInvoices.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInvoices.Location = new System.Drawing.Point(395, 426);
+            this.btnInvoices.Name = "btnInvoices";
+            this.btnInvoices.Size = new System.Drawing.Size(274, 74);
+            this.btnInvoices.TabIndex = 17;
+            this.btnInvoices.Text = "Invoices";
+            this.btnInvoices.UseVisualStyleBackColor = true;
+            this.btnInvoices.Click += new System.EventHandler(this.btnInvoices_Click);
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1065, 689);
+            this.Controls.Add(this.btnInvoices);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnGraph);
             this.Controls.Add(this.label3);
@@ -205,5 +219,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGraph;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnInvoices;
     }
 }
