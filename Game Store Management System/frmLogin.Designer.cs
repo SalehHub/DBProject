@@ -72,7 +72,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(282, 34);
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "saleh";
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
             // 
@@ -82,7 +81,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(282, 34);
             this.txtUsername.TabIndex = 2;
-            this.txtUsername.Text = "saleh";
             // 
             // label2
             // 

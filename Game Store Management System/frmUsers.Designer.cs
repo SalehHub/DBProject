@@ -31,6 +31,8 @@
             this.dgUsers = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gbadd = new System.Windows.Forms.GroupBox();
+            this.txtLName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.ckPass = new System.Windows.Forms.CheckBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -48,8 +50,6 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtLName = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).BeginInit();
             this.gbadd.SuspendLayout();
             this.SuspendLayout();
@@ -108,6 +108,22 @@
             this.gbadd.TabStop = false;
             this.gbadd.Visible = false;
             // 
+            // txtLName
+            // 
+            this.txtLName.Location = new System.Drawing.Point(571, 79);
+            this.txtLName.Name = "txtLName";
+            this.txtLName.Size = new System.Drawing.Size(198, 39);
+            this.txtLName.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(438, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 33);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Last name";
+            // 
             // ckPass
             // 
             this.ckPass.AutoSize = true;
@@ -142,6 +158,7 @@
             // 
             // cmbType
             // 
+            this.cmbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbType.FormattingEnabled = true;
             this.cmbType.Items.AddRange(new object[] {
             "admin",
@@ -273,22 +290,6 @@
             this.label5.Text = "Search: ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtLName
-            // 
-            this.txtLName.Location = new System.Drawing.Point(571, 79);
-            this.txtLName.Name = "txtLName";
-            this.txtLName.Size = new System.Drawing.Size(198, 39);
-            this.txtLName.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(438, 85);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 33);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Last name";
-            // 
             // frmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
@@ -307,7 +308,7 @@
             this.Name = "frmUsers";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manage staffs";
+            this.Text = "Manage staff";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.usersForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).EndInit();

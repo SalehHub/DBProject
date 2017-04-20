@@ -141,39 +141,42 @@ namespace Game_Store_Management_System
         private void btnDel_Click(object sender, EventArgs e)
         {
             if (grdOrders.CurrentRow != null)
+
             {
-                string GameID = grdOrders.Rows[grdOrders.CurrentRow.Index].Cells[5].Value.ToString();
-
-                string Order_NO = grdOrders.Rows[grdOrders.CurrentRow.Index].Cells[1].Value.ToString();
-                string NewQuantity = grdOrders.Rows[grdOrders.CurrentRow.Index].Cells[3].Value.ToString();
-
-
-                SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-
-                cmd2.CommandText = @"Delete from orders where order_NO=@OrderNO";
-
-                cmd2.Parameters.AddWithValue("OrderNO", Order_NO);
-
-                try
+                if (MessageBox.Show("Are you sure you want to delete this order?", "Danger", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
+                    string GameID = grdOrders.Rows[grdOrders.CurrentRow.Index].Cells[5].Value.ToString();
 
-                    SqlDataReader reader2 = cmd2.ExecuteReader();
-
-                    reader2.Close();
-
-                    updateQuantity(GameID, int.Parse(NewQuantity));
+                    string Order_NO = grdOrders.Rows[grdOrders.CurrentRow.Index].Cells[1].Value.ToString();
+                    string NewQuantity = grdOrders.Rows[grdOrders.CurrentRow.Index].Cells[3].Value.ToString();
 
 
+                    SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
 
-                    Find();
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show(ex.Message);
+                    cmd2.CommandText = @"Delete from orders where order_NO=@OrderNO";
+
+                    cmd2.Parameters.AddWithValue("OrderNO", Order_NO);
+
+                    try
+                    {
+
+                        SqlDataReader reader2 = cmd2.ExecuteReader();
+
+                        reader2.Close();
+
+                        updateQuantity(GameID, int.Parse(NewQuantity));
+
+
+
+                        Find();
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }
-
         private void grdOrders_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

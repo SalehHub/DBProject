@@ -44,7 +44,7 @@ namespace Game_Store_Management_System
             try
             {
                 SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-                cmd.CommandText = "SELECT username FROM Staff;";
+                cmd.CommandText = "SELECT username FROM Staff where Username !='sys';";
 
                 SqlDataReader reader = cmd.ExecuteReader();
 

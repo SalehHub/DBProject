@@ -259,7 +259,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmCustomers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCustomers";
+            this.Text = "Customers";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCustomers_Load);
             this.gbadd.ResumeLayout(false);

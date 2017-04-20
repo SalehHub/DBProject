@@ -268,13 +268,15 @@ namespace Game_Store_Management_System
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            string ID = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[0].Value.ToString();
-            string FName = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[1].Value.ToString();
-            string LName = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[2].Value.ToString();
-            string Email = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[3].Value.ToString();
+            if (dgUsers.CurrentRow != null)
+            {
+                string ID = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[0].Value.ToString();
+                string FName = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[1].Value.ToString();
+                string LName = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[2].Value.ToString();
+                string Email = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[3].Value.ToString();
 
-          
-            
+
+
 
                 if (MessageBox.Show("Are you sure you want to delete this user?\n\nFirst name: " + FName
                    , "Danger", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
@@ -282,7 +284,7 @@ namespace Game_Store_Management_System
 
                     SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
                     cmd.CommandText = "DELETE FROM Customer WHERE ID = @ID;";
-                    cmd.Parameters.AddWithValue("ID",ID );
+                    cmd.Parameters.AddWithValue("ID", ID);
 
                     try
                     {
@@ -296,6 +298,7 @@ namespace Game_Store_Management_System
                     }
 
                 }
+            }
             }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

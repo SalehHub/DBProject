@@ -87,12 +87,6 @@
     <Compile Include="frmEditOrder.Designer.cs">
       <DependentUpon>frmEditOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditOrders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEditOrders.Designer.cs">
-      <DependentUpon>frmEditOrders.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmGraph.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,9 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditOrder.resx">
       <DependentUpon>frmEditOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEditOrders.resx">
-      <DependentUpon>frmEditOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGraph.resx">
       <DependentUpon>frmGraph.cs</DependentUpon>
