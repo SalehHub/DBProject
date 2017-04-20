@@ -70,7 +70,6 @@ namespace Game_Store_Management_System
                 cmd.Parameters.AddWithValue("Password", Password);
                 try
                 {
-                    //int count = (int)cmd.ExecuteScalar();
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.HasRows && reader.Read())
@@ -78,13 +77,8 @@ namespace Game_Store_Management_System
                         userUsername = reader[0].ToString();
                         userName = reader[2].ToString();
                         userType = reader[4].ToString();
-                        //Properties.Settings.Default.Username = reader[0].ToString();
-                        //Properties.Settings.Default.Name = reader[2].ToString();
-                        //Properties.Settings.Default.Type = reader[3].ToString();
-                        //Properties.Settings.Default.Save();
-
                         reader.Close();
-                        insertLoginRecord(userUsername);// Properties.Settings.Default.Username);
+                        insertLoginRecord(userUsername);
 
                         
 
@@ -115,8 +109,6 @@ namespace Game_Store_Management_System
             try
             {
                 sqlDBConnection.Open();
-                //MessageBox.Show("Connection Opened", "DB Class");
-                //EnableControls(false);
             }
             catch (SqlException ex)
             {

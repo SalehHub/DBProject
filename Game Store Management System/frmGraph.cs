@@ -1,15 +1,7 @@
 ﻿using System;
-using Microsoft.Reporting.WinForms;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Globalization;
+using System.Windows.Forms;
 
 namespace Game_Store_Management_System
 {
@@ -20,13 +12,6 @@ namespace Game_Store_Management_System
             InitializeComponent();
         }
 
-        private void frmGraph_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'GameStore2DataSet.dtGraph' table. You can move, or remove it, as needed.
-            //this.dtGraphTableAdapter.Fill(this.GameStore2DataSet.dtGraph);
-
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -65,7 +50,7 @@ namespace Game_Store_Management_System
 
                        
                     }
- reader.Close();
+                        reader.Close();
                 }
                 catch (SqlException ex)
                 {

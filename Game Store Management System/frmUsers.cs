@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Odbc;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Game_Store_Management_System
@@ -222,7 +215,6 @@ namespace Game_Store_Management_System
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
-            //int i;
             string Username = txtUsername.Text;
             string OldUsername = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[0].Value.ToString();
 
@@ -258,7 +250,6 @@ namespace Game_Store_Management_System
                 {
                    cmd.ExecuteNonQuery();
 
-                    //MessageBox.Show(i.ToString());
 
                     txtUsername.Text = "";
                     txtName.Text = "";
@@ -381,9 +372,5 @@ namespace Game_Store_Management_System
             }
         }
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

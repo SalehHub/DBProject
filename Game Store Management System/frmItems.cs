@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Game_Store_Management_System
@@ -22,11 +16,9 @@ namespace Game_Store_Management_System
         public string itemID;
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //tessts
             gbadd.Visible = true;
             btnUpdate.Visible = false;
             btnSave.Visible = true;
-           // lblPrice.Visible = false;
 
             txtName.Text = "";
             txtPrice.Text = "";
@@ -37,12 +29,7 @@ namespace Game_Store_Management_System
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {
-            // Convert.ToInt32(Price.Remove('$').Remove('.').Trim()
-
-
-            
-                
+        { 
             if (validateAddNewItems())
             {
 
@@ -100,15 +87,12 @@ namespace Game_Store_Management_System
         {
 
             string Name = txtName.Text;
-            //decimal Price = Convert.ToDecimal(txtPrice.Text.Replace(" ", ""));
             string Qu = txtQu.Text;
             string Pl = cmbPl.Text;
 
             string Price1 = txtPrice.Text.Replace(" ", "").Replace(".", "");
             int Price2;
             int.TryParse(Price1, out Price2);
-
-            //MessageBox.Show(Price1);
 
             if (Price2 <= 0 )
             {
@@ -146,16 +130,7 @@ namespace Game_Store_Management_System
                 return false;
 
             }
-            /*
-            if (Price < 1)
-            {
 
-                MessageBox.Show("Please enter a value for price");
-
-                return false;
-
-            }
-            */
             int q = 0;
             int.TryParse(Qu, out q);
             if ( q < 1)
@@ -217,10 +192,6 @@ namespace Game_Store_Management_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            // Convert.ToInt32(Price.Remove('$').Remove('.').Trim()
-
-
-
 
             if (validateAddNewItems())
             {
@@ -327,19 +298,11 @@ namespace Game_Store_Management_System
             this.Close();
         }
 
-        private void txtPrice_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
 
-        }
-
-        private void txtPrice_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //Only number
+            //Only numbers
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                 (e.KeyChar != '.'))
             {
@@ -351,7 +314,7 @@ namespace Game_Store_Management_System
             {
                 e.Handled = true;
             }
-            //*/
+            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -359,8 +322,6 @@ namespace Game_Store_Management_System
             gbadd.Visible = false;
             btnEdit.Visible = true;
             btnAdd.Visible = true;
-
-            //skjbdsjfbjafbbsfbdabf 
 
         }
     }

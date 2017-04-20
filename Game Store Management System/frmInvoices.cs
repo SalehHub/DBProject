@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Game_Store_Management_System
@@ -103,12 +97,6 @@ namespace Game_Store_Management_System
 
                 MessageBox.Show("Please select an invoice to print!");
             }
-        }
-
-        private void txtInvoiceNO_TextChanged(object sender, EventArgs e)
-        {
-            //(grdInvoices.DataSource as DataTable).DefaultView.RowFilter = string.Format("Customer_Name LIKE '%{0}%'", txtInvoiceNO.Text);
-
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -282,5 +270,6 @@ namespace Game_Store_Management_System
             cbStaff.Text  = grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[6].Value.ToString();
 
         }
+
     }
 }

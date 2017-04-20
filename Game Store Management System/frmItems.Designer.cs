@@ -60,8 +60,6 @@
             this.txtPrice.PromptChar = ' ';
             this.txtPrice.Size = new System.Drawing.Size(140, 39);
             this.txtPrice.TabIndex = 19;
-            this.txtPrice.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPrice_MaskInputRejected);
-            this.txtPrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrice_KeyDown);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // btnAdd

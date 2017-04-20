@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Game_Store_Management_System
@@ -19,7 +13,7 @@ namespace Game_Store_Management_System
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            lblWelcome.Text = "Welcome, " + frmLogin.userName; //+ Properties.Settings.Default.Name;
+            lblWelcome.Text = "Welcome, " + frmLogin.userName;
             if (frmLogin.userType != "admin")
             {
                 btnManageUsers.Visible = false;
@@ -31,7 +25,6 @@ namespace Game_Store_Management_System
             {
 
                 this.BackColor = Color.DarkGray;
-
 
             }
         }

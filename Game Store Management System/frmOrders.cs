@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Game_Store_Management_System
@@ -18,22 +11,7 @@ namespace Game_Store_Management_System
             InitializeComponent();
         }
 
-        private void txtGameID_KeyDown(object sender, KeyEventArgs e)
-        {
-            //if (e.KeyCode == Keys.Enter)
-           // {
 
-           // }
-        }
-        private void frmOrders_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtGameID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

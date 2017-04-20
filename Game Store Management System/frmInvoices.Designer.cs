@@ -106,7 +106,6 @@
             this.txtInvoiceNO.Name = "txtInvoiceNO";
             this.txtInvoiceNO.Size = new System.Drawing.Size(255, 39);
             this.txtInvoiceNO.TabIndex = 17;
-            this.txtInvoiceNO.TextChanged += new System.EventHandler(this.txtInvoiceNO_TextChanged);
             this.txtInvoiceNO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInvoiceNO_KeyPress);
             // 
             // grdInvoices

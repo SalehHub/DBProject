@@ -97,7 +97,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(229, 39);
             this.txtEmail.TabIndex = 6;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtFName
             // 
@@ -183,7 +182,6 @@
             this.gbadd.TabIndex = 11;
             this.gbadd.TabStop = false;
             this.gbadd.Visible = false;
-            this.gbadd.Enter += new System.EventHandler(this.gbadd_Enter);
             // 
             // txtLName
             // 
@@ -192,7 +190,6 @@
             this.txtLName.PromptChar = ' ';
             this.txtLName.Size = new System.Drawing.Size(140, 39);
             this.txtLName.TabIndex = 19;
-            this.txtLName.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtLName_MaskInputRejected);
             // 
             // lblLName
             // 

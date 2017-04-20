@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Game_Store_Management_System
@@ -60,11 +54,9 @@ namespace Game_Store_Management_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //int i;
             string FName = txtFName.Text;
             string LName = txtLName.Text;
             string Email = txtEmail.Text;
-
 
             SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
             if (validateAddNewCustomer())
@@ -83,13 +75,9 @@ namespace Game_Store_Management_System
                 {
                    cmd.ExecuteNonQuery();
 
-                    //MessageBox.Show(i.ToString());
-
                     txtFName.Text = "";
                     txtLName.Text = "";
                     txtEmail.Text = "";
-
-
 
                     btnAdd.Visible = true;
                     gbadd.Visible = false;
@@ -174,17 +162,6 @@ namespace Game_Store_Management_System
 
             }
 
-            /*
-            if (FName.Trim().Length < 3)
-            {
-
-                MessageBox.Show("Please enter more than 3 characters for the Email.");
-
-                return false;
-
-            }
-            */
-
             Regex reg = new Regex(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
 
             if (!reg.IsMatch(txtEmail.Text))
@@ -199,45 +176,7 @@ namespace Game_Store_Management_System
 
         }
 
-        /*
-        private bool validateEditUserForm()
-        {
-            string UserFName = txtFName.Text;
-            string FName = txtEmail.Text;
-
-
-            if (UserFName.Trim().Length < 3)
-            {
-
-                MessageBox.Show("Please enter more than 3 characters for the FName.");
-
-                return false;
-
-            }
-
-            if (FName.Trim().Length < 3)
-            {
-
-                MessageBox.Show("Please enter more than 3 characters for the email.");
-
-                return false;
-
-            }
-
-            Regex reg = new Regex(@"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*");
-
-            if (!reg.IsMatch(txtEmail.Text))
-            {
-                MessageBox.Show(txtEmail.Text + " Is not a valid email .", "Attention");
-
-                return false;
-            }
-
-
-            return true;
-
-        }
-        */
+       
 
         //Load all users to the data grid 
         private void showAllCustomers()
@@ -261,10 +200,6 @@ namespace Game_Store_Management_System
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -274,7 +209,6 @@ namespace Game_Store_Management_System
                 string FName = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[1].Value.ToString();
                 string LName = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[2].Value.ToString();
                 string Email = dgUsers.Rows[dgUsers.CurrentRow.Index].Cells[3].Value.ToString();
-
 
 
 
@@ -325,25 +259,13 @@ namespace Game_Store_Management_System
         
     }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-        
-        }
+
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void gbadd_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtLName_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
     }
     }
 
