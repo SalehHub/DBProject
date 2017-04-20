@@ -125,7 +125,6 @@
             this.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmEditOrder";
-            this.Load += new System.EventHandler(this.frmEditOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

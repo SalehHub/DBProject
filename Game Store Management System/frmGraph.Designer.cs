@@ -122,7 +122,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Graph";
-            this.Load += new System.EventHandler(this.frmGraph_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGraphBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameStore2DataSet)).EndInit();
             this.ResumeLayout(false);

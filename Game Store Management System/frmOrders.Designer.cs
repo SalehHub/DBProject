@@ -59,8 +59,6 @@
             this.txtGameID.Name = "txtGameID";
             this.txtGameID.Size = new System.Drawing.Size(244, 39);
             this.txtGameID.TabIndex = 0;
-            this.txtGameID.TextChanged += new System.EventHandler(this.txtGameID_TextChanged);
-            this.txtGameID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGameID_KeyDown);
             this.txtGameID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGameID_KeyPress);
             // 
             // label1
@@ -276,7 +274,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Orders";
-            this.Load += new System.EventHandler(this.frmOrders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdOrderList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
