@@ -221,6 +221,9 @@ namespace Game_Store_Management_System
             }
         }
 
+        private void txtInvoiceNO_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

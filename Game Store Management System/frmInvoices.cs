@@ -159,7 +159,7 @@ namespace Game_Store_Management_System
             else if (!cbOther.Checked && cbDate.Checked)
             {
                 txtInvoiceNO.Enabled = false;
-                label2.Visible = false;
+               // label2.Visible = false;
                 dcFrom.Enabled = true;
                 dcTo.Enabled = true;
                 s = 2;
@@ -177,7 +177,7 @@ namespace Game_Store_Management_System
             else
             {
                 txtInvoiceNO.Enabled = false;
-                label2.Visible = false;
+               // label2.Visible = false;
                 dcFrom.Enabled = false;
                 dcTo.Enabled = false;
                 return s;
@@ -209,8 +209,7 @@ namespace Game_Store_Management_System
             string invoID = grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[1].Value.ToString();
             string cusID = grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[5].Value.ToString();
             string staffID = grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[6].Value.ToString();
-           // string staffName = grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[4].Value.ToString();
-            
+          
 
             groupBox1.Text = "Updete Invoice#" + invoID;
 
@@ -242,34 +241,87 @@ namespace Game_Store_Management_System
             groupBox1.Visible = false;
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        public bool IsTheCustomerExist(string ID)
         {
             SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
-            cmd.CommandText = "Update Invoice set Customer_ID=@CusID, Username=@Staffus where Invoice_NO=@invID ";
-            cmd.Parameters.AddWithValue("CusID", txtCusID.Text);
-            cmd.Parameters.AddWithValue("Staffus", cbStaff.Text);
-            cmd.Parameters.AddWithValue("invID", grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[1].Value.ToString());
+            cmd.CommandText = "SELECT COUNT(*) FROM Customer WHERE ID = @ID";
 
+            cmd.Parameters.AddWithValue("ID", int.Parse(ID));
             try
             {
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Invoice has been updated");
-                showAllInvoices();
-            }
+                int i = (int)cmd.ExecuteScalar();
+                if (i > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
 
-            catch(SqlException ex)
+            }
+            catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (IsTheCustomerExist(txtCusID.Text.Trim()))
+            {
+
+                SqlCommand cmd = frmLogin.sqlDBConnection.CreateCommand();
+                cmd.CommandText = "Update Invoice set Customer_ID=@CusID, Username=@Staffus where Invoice_NO=@invID ";
+                cmd.Parameters.AddWithValue("CusID", txtCusID.Text);
+                cmd.Parameters.AddWithValue("Staffus", cbStaff.Text);
+                cmd.Parameters.AddWithValue("invID", grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[1].Value.ToString());
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Invoice has been updated");
+                    showAllInvoices();
+                }
+
+                catch (SqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("The customer cannot be found!");
             }
         }
 
         private void grdInvoices_SelectionChanged(object sender, EventArgs e)
         {
-            groupBox1.Text = "Updete Invoice#" + grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[1].Value.ToString();
-            txtCusID.Text = grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[5].Value.ToString();
-            cbStaff.Text  = grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[6].Value.ToString();
+            if (grdInvoices.CurrentRow != null)
+            {
+                groupBox1.Text = "Updete Invoice#" + grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[1].Value.ToString();
+                txtCusID.Text = grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[5].Value.ToString();
+                cbStaff.Text = grdInvoices.Rows[grdInvoices.CurrentRow.Index].Cells[6].Value.ToString();
+            }
 
         }
 
+        private void txtCusID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCusID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char keypress = e.KeyChar;
+            if (!char.IsDigit(keypress) && e.KeyChar != Convert.ToChar(Keys.Back))
+            {
+                e.Handled = true;
+
+
+            }
+        }
     }
 }

@@ -148,7 +148,7 @@
             this.btnGraph.Name = "btnGraph";
             this.btnGraph.Size = new System.Drawing.Size(274, 74);
             this.btnGraph.TabIndex = 9;
-            this.btnGraph.Text = "Graph";
+            this.btnGraph.Text = "Sales graph";
             this.btnGraph.UseVisualStyleBackColor = true;
             this.btnGraph.Click += new System.EventHandler(this.btnGraph_Click);
             // 

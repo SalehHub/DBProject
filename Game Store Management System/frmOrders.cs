@@ -69,6 +69,8 @@ namespace Game_Store_Management_System
                         grdOrderList.Rows.Add(game);
 
                         reader2.Close();
+
+                        //calculate the total
                         computeTotal();
                     }
                     else
@@ -111,7 +113,7 @@ namespace Game_Store_Management_System
                 {
                     if (createOrders())
                     {
-                        updateQuantity();
+                        updateInventory();
 
                         frmInvoice frmInvoice = new frmInvoice();
                         frmInvoice.Invoice_NO = lblInovice.Text;
@@ -121,6 +123,7 @@ namespace Game_Store_Management_System
                     }else
                     {
                         DeleteInvoice(lblInovice.Text);
+                        MessageBox.Show("Something went wrong, the checkout has been canceled");
                     }
                 }
             }
@@ -145,7 +148,7 @@ namespace Game_Store_Management_System
             if (grdOrderList.Rows.Count == 0)
             {
 
-                MessageBox.Show("There are no games in the grid");
+                MessageBox.Show("There are no orders to check out");
                 return false;
             }
 
@@ -197,7 +200,7 @@ namespace Game_Store_Management_System
             cmd.Parameters.AddWithValue("Date", DateTime.Now.ToString());
             try
             {
-                Int32 i = (Int32)cmd.ExecuteScalar();
+                int i = (int)cmd.ExecuteScalar();
                 lblInovice.Text = i.ToString();
                 return true;
             }
@@ -240,7 +243,7 @@ namespace Game_Store_Management_System
             return true;
         }
 
-        public void updateQuantity()
+        public void updateInventory()
         {
             foreach (DataGridViewRow row in grdOrderList.Rows)
             {
@@ -366,6 +369,7 @@ namespace Game_Store_Management_System
             if (grdOrderList.CurrentRow != null)
             {
                 grdOrderList.Rows.RemoveAt(grdOrderList.CurrentRow.Index);
+                computeTotal();
             }else
             {
 
@@ -382,7 +386,7 @@ namespace Game_Store_Management_System
             }
             else if (!IsTheCustomerExist(txtCusID.Text.Trim()))
             {
-                MessageBox.Show("Customer not found!");
+                MessageBox.Show("The Customer not found!");
             }
             else
             {
@@ -427,6 +431,11 @@ namespace Game_Store_Management_System
         private void button2_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void txtGameID_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -38,3 +38,4 @@ C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\bin\Debug\Microsoft.ReportViewer.WinForms.dll
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.exe
 C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.pdb
+C:\Users\saz\Desktop\DBProject\DBProject\Game Store Management System\obj\Debug\Game Store Management System.csprojResolveAssemblyReference.cache

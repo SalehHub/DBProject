@@ -41,16 +41,16 @@
             this.cbOther = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.txtCusID = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.cbStaff = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCusID = new System.Windows.Forms.TextBox();
+            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdInvoices)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -121,6 +121,7 @@
             this.grdInvoices.Location = new System.Drawing.Point(15, 258);
             this.grdInvoices.Margin = new System.Windows.Forms.Padding(6);
             this.grdInvoices.Name = "grdInvoices";
+            this.grdInvoices.ReadOnly = true;
             this.grdInvoices.RowTemplate.Height = 24;
             this.grdInvoices.ShowCellErrors = false;
             this.grdInvoices.ShowRowErrors = false;
@@ -179,12 +180,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 13);
+            this.label2.Location = new System.Drawing.Point(53, 13);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(343, 66);
             this.label2.TabIndex = 27;
             this.label2.Text = "Type Customer name, \r\nstaff name or invoice number:";
-            this.label2.Visible = false;
             // 
             // panel1
             // 
@@ -198,15 +198,6 @@
             this.panel1.Size = new System.Drawing.Size(530, 64);
             this.panel1.TabIndex = 28;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 33);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "From:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -216,6 +207,15 @@
             this.label4.TabIndex = 30;
             this.label4.Text = "To:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 33);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "From:";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.cbStaff);
@@ -224,12 +224,68 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtCusID);
-            this.groupBox1.Location = new System.Drawing.Point(12, 13);
+            this.groupBox1.Location = new System.Drawing.Point(17, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1122, 236);
+            this.groupBox1.Size = new System.Drawing.Size(1114, 236);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Update Invoice ";
+            // 
+            // cbStaff
+            // 
+            this.cbStaff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStaff.FormattingEnabled = true;
+            this.cbStaff.Location = new System.Drawing.Point(221, 143);
+            this.cbStaff.Name = "cbStaff";
+            this.cbStaff.Size = new System.Drawing.Size(199, 39);
+            this.cbStaff.TabIndex = 33;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(959, 118);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(157, 64);
+            this.btnCancel.TabIndex = 32;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(775, 118);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(157, 64);
+            this.btnUpdate.TabIndex = 31;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 140);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(184, 33);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Staff Username";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 73);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(157, 33);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Customer ID";
+            // 
+            // txtCusID
+            // 
+            this.txtCusID.Location = new System.Drawing.Point(221, 69);
+            this.txtCusID.Name = "txtCusID";
+            this.txtCusID.Size = new System.Drawing.Size(199, 39);
+            this.txtCusID.TabIndex = 0;
+            this.txtCusID.TextChanged += new System.EventHandler(this.txtCusID_TextChanged);
+            this.txtCusID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCusID_KeyPress);
             // 
             // btnEdit
             // 
@@ -241,60 +297,6 @@
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // txtCusID
-            // 
-            this.txtCusID.Location = new System.Drawing.Point(218, 103);
-            this.txtCusID.Name = "txtCusID";
-            this.txtCusID.Size = new System.Drawing.Size(199, 39);
-            this.txtCusID.TabIndex = 0;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 33);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Customer ID";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 174);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(184, 33);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Staff Username";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(775, 168);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(157, 64);
-            this.btnUpdate.TabIndex = 31;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(959, 168);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(157, 64);
-            this.btnCancel.TabIndex = 32;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // cbStaff
-            // 
-            this.cbStaff.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbStaff.FormattingEnabled = true;
-            this.cbStaff.Location = new System.Drawing.Point(218, 177);
-            this.cbStaff.Name = "cbStaff";
-            this.cbStaff.Size = new System.Drawing.Size(199, 39);
-            this.cbStaff.TabIndex = 33;
             // 
             // frmInvoices
             // 

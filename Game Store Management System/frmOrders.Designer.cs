@@ -59,6 +59,7 @@
             this.txtGameID.Name = "txtGameID";
             this.txtGameID.Size = new System.Drawing.Size(244, 39);
             this.txtGameID.TabIndex = 0;
+            this.txtGameID.TextChanged += new System.EventHandler(this.txtGameID_TextChanged);
             this.txtGameID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGameID_KeyPress);
             // 
             // label1
@@ -148,7 +149,7 @@
             this.btnCheckout.Name = "btnCheckout";
             this.btnCheckout.Size = new System.Drawing.Size(153, 62);
             this.btnCheckout.TabIndex = 4;
-            this.btnCheckout.Text = "Check out";
+            this.btnCheckout.Text = "Checkout";
             this.btnCheckout.UseVisualStyleBackColor = true;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 

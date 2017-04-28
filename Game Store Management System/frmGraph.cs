@@ -46,9 +46,13 @@ namespace Game_Store_Management_System
                     if (reader.HasRows && reader.Read())
                     {
 
-                        lblHiMonth.Text = "Month of the yaer that has heighst orders is " + CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(int.Parse(reader[1].ToString()));
+                        lblHiMonth.Text = "Month of the year "+txtYear.Text+" that has heighst orders is " + CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(int.Parse(reader[1].ToString()));
 
-                       
+
+                    }
+                    else{
+
+                        lblHiMonth.Text = "";
                     }
                         reader.Close();
                 }

@@ -79,6 +79,9 @@ namespace Game_Store_Management_System
         {
             showAllGames();
 
+            ToolTip ToolTip1 = new ToolTip();
+            ToolTip1.SetToolTip(this.txtSearch, "Search by Game ID, Name or platform");
+
         }
 
 
@@ -274,7 +277,7 @@ namespace Game_Store_Management_System
         {
             string search = txtSearch.Text;
             SqlCommand cmd2 = frmLogin.sqlDBConnection.CreateCommand();
-            cmd2.CommandText = "SELECT * From Game WHERE Name LIKE @Search or LIKE @Search or ID LIKE @Search or Platform LIKE @Search or Quantity LIKE @Search or Price LIKE @Search;";
+            cmd2.CommandText = "SELECT * From Game WHERE Name LIKE @Search or ID LIKE @Search or Platform LIKE @Search;";
 
             cmd2.Parameters.AddWithValue("@Search", "%" + search + "%");
             try
@@ -323,6 +326,15 @@ namespace Game_Store_Management_System
             btnEdit.Visible = true;
             btnAdd.Visible = true;
 
+        }
+
+        private void txtQu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char keypress = e.KeyChar;
+            if (!char.IsDigit(keypress) && e.KeyChar != Convert.ToChar(Keys.Back))
+            {
+                e.Handled = true;
+            }
         }
     }
     

@@ -84,7 +84,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(23, 209);
+            this.btnCancel.Location = new System.Drawing.Point(16, 187);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(134, 52);
             this.btnCancel.TabIndex = 10;
@@ -94,7 +94,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(201, 209);
+            this.btnUpdate.Location = new System.Drawing.Point(194, 187);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(126, 52);
             this.btnUpdate.TabIndex = 9;
@@ -113,7 +113,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(695, 287);
+            this.label5.Location = new System.Drawing.Point(718, 312);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(105, 33);
             this.label5.TabIndex = 24;
@@ -137,7 +137,7 @@
             this.gbadd.Controls.Add(this.btnUpdate);
             this.gbadd.Location = new System.Drawing.Point(377, 7);
             this.gbadd.Name = "gbadd";
-            this.gbadd.Size = new System.Drawing.Size(750, 274);
+            this.gbadd.Size = new System.Drawing.Size(750, 253);
             this.gbadd.TabIndex = 19;
             this.gbadd.TabStop = false;
             this.gbadd.Visible = false;
@@ -145,7 +145,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(457, 179);
+            this.label7.Location = new System.Drawing.Point(457, 121);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 33);
             this.label7.TabIndex = 25;
@@ -153,17 +153,17 @@
             // 
             // txtQu
             // 
-            this.txtQu.Location = new System.Drawing.Point(575, 127);
-            this.txtQu.Mask = "0000";
+            this.txtQu.Location = new System.Drawing.Point(575, 73);
             this.txtQu.Name = "txtQu";
             this.txtQu.PromptChar = ' ';
             this.txtQu.Size = new System.Drawing.Size(140, 39);
             this.txtQu.TabIndex = 24;
+            this.txtQu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQu_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(456, 130);
+            this.label6.Location = new System.Drawing.Point(456, 76);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 33);
             this.label6.TabIndex = 23;
@@ -171,6 +171,7 @@
             // 
             // cmbPl
             // 
+            this.cmbPl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPl.FormattingEnabled = true;
             this.cmbPl.Items.AddRange(new object[] {
             "PC",
@@ -180,7 +181,7 @@
             "XBOX One",
             "3DS",
             "Switch"});
-            this.cmbPl.Location = new System.Drawing.Point(575, 176);
+            this.cmbPl.Location = new System.Drawing.Point(575, 118);
             this.cmbPl.Name = "cmbPl";
             this.cmbPl.Size = new System.Drawing.Size(140, 39);
             this.cmbPl.TabIndex = 22;
@@ -204,7 +205,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(201, 209);
+            this.btnSave.Location = new System.Drawing.Point(194, 187);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(126, 52);
             this.btnSave.TabIndex = 0;
@@ -266,7 +267,7 @@
             // 
             this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.Location = new System.Drawing.Point(806, 287);
+            this.txtSearch.Location = new System.Drawing.Point(829, 309);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(298, 39);
             this.txtSearch.TabIndex = 23;

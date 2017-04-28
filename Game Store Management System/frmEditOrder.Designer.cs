@@ -67,6 +67,7 @@
             this.txtInvoiceNO.Name = "txtInvoiceNO";
             this.txtInvoiceNO.Size = new System.Drawing.Size(255, 39);
             this.txtInvoiceNO.TabIndex = 1;
+            this.txtInvoiceNO.TextChanged += new System.EventHandler(this.txtInvoiceNO_TextChanged);
             this.txtInvoiceNO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInvoiceNO_KeyPress);
             // 
             // btnFind
@@ -125,6 +126,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmEditOrder";
+            this.Text = "Edit order";
             ((System.ComponentModel.ISupportInitialize)(this.grdOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
