@@ -126,6 +126,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmEditOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit order";
             ((System.ComponentModel.ISupportInitialize)(this.grdOrders)).EndInit();
             this.ResumeLayout(false);

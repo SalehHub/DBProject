@@ -69,7 +69,7 @@ namespace Game_Store_Management_System
             }
 
             else
-                MessageBox.Show("Chooose at leaset one option mofak");
+                MessageBox.Show("Choose at leaset one option");
         }
 
 

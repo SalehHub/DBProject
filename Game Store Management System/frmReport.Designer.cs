@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dtOrderCusAndDateBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DSOrdersReport = new Game_Store_Management_System.DSOrdersReport();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
@@ -70,9 +70,9 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource2.Name = "DSOrdersCusAndDate";
-            reportDataSource2.Value = this.dtOrderCusAndDateBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DSOrdersCusAndDate";
+            reportDataSource1.Value = this.dtOrderCusAndDateBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Game_Store_Management_System.Report4.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(15, 187);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(6);
@@ -222,6 +222,8 @@
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Times New Roman", 16.2F);
             this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(791, 620);
             this.Name = "frmReport";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

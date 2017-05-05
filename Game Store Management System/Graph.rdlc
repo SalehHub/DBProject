@@ -226,9 +226,7 @@
                 </Style>
                 <ChartAxisTitle>
                   <Caption>Number of Orders</Caption>
-                  <Style>
-                    <FontSize>8pt</FontSize>
-                  </Style>
+                  <Style />
                 </ChartAxisTitle>
                 <ChartMajorGridLines>
                   <Style>
@@ -301,7 +299,7 @@
           <ChartLegend Name="Default">
             <Style>
               <BackgroundGradientType>None</BackgroundGradientType>
-              <FontSize>8pt</FontSize>
+              <FontSize>12pt</FontSize>
             </Style>
             <Position>TopRight</Position>
             <DockOutsideChartArea>true</DockOutsideChartArea>

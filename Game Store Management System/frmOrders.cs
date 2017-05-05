@@ -17,7 +17,7 @@ namespace Game_Store_Management_System
         {
 
 
-            if (txtGameID.Text.Trim() == "" )
+            if (txtGameID.Text.Trim() == "")
             {
 
                 MessageBox.Show("Please enter a valid Game ID");
@@ -84,7 +84,7 @@ namespace Game_Store_Management_System
                 {
                     MessageBox.Show(ex.Message);
                 }
-        }
+            }
 
 
         }
@@ -94,14 +94,17 @@ namespace Game_Store_Management_System
 
             if (grdOrderList.CurrentRow != null)
             {
-                string Qu = grdOrderList.Rows[grdOrderList.CurrentRow.Index].Cells[4].Value.ToString();
+                if (grdOrderList.Rows[grdOrderList.CurrentRow.Index].Cells[4].Value != null)
+                {
+                    string Qu = grdOrderList.Rows[grdOrderList.CurrentRow.Index].Cells[4].Value.ToString();
 
-                string Price = grdOrderList.Rows[grdOrderList.CurrentRow.Index].Cells[3].Value.ToString();
+                    string Price = grdOrderList.Rows[grdOrderList.CurrentRow.Index].Cells[3].Value.ToString();
 
-                decimal total = decimal.Parse(Price) * decimal.Parse(Qu);
-                grdOrderList.Rows[grdOrderList.CurrentRow.Index].Cells[5].Value = total;
+                    decimal total = decimal.Parse(Price) * decimal.Parse(Qu);
+                    grdOrderList.Rows[grdOrderList.CurrentRow.Index].Cells[5].Value = total;
 
-                computeTotal();
+                    computeTotal();
+                }
             }
         }
 
@@ -120,7 +123,8 @@ namespace Game_Store_Management_System
 
                         frmInvoice.ShowDialog();
                         ClearTheForm();
-                    }else
+                    }
+                    else
                     {
                         DeleteInvoice(lblInovice.Text);
                         MessageBox.Show("Something went wrong, the checkout has been canceled");
@@ -263,7 +267,7 @@ namespace Game_Store_Management_System
                 catch (SqlException ex)
                 {
                     MessageBox.Show(ex.Message);
-                   
+
                 }
             }
         }
@@ -339,7 +343,7 @@ namespace Game_Store_Management_System
 
         private void txtCusID_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar==Convert.ToChar(Keys.Enter))
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 btnFind_Click(sender, e);
 
@@ -347,7 +351,7 @@ namespace Game_Store_Management_System
             char keypress = e.KeyChar;
             if (!char.IsDigit(keypress) && e.KeyChar != Convert.ToChar(Keys.Back))
             {
-                e.Handled=true;
+                e.Handled = true;
             }
         }
 
@@ -365,12 +369,12 @@ namespace Game_Store_Management_System
         private void btnDel_Click(object sender, EventArgs e)
         {
 
-            
             if (grdOrderList.CurrentRow != null)
             {
                 grdOrderList.Rows.RemoveAt(grdOrderList.CurrentRow.Index);
                 computeTotal();
-            }else
+            }
+            else
             {
 
                 MessageBox.Show("Please select a game to delete!");
@@ -427,15 +431,6 @@ namespace Game_Store_Management_System
                 }
             }
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void txtGameID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

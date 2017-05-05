@@ -54,18 +54,17 @@
             // 
             // txtGameID
             // 
-            this.txtGameID.Location = new System.Drawing.Point(177, 55);
+            this.txtGameID.Location = new System.Drawing.Point(151, 55);
             this.txtGameID.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtGameID.Name = "txtGameID";
             this.txtGameID.Size = new System.Drawing.Size(244, 39);
             this.txtGameID.TabIndex = 0;
-            this.txtGameID.TextChanged += new System.EventHandler(this.txtGameID_TextChanged);
             this.txtGameID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGameID_KeyPress);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 55);
+            this.label1.Location = new System.Drawing.Point(22, 58);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 33);
@@ -74,7 +73,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(177, 164);
+            this.button1.Location = new System.Drawing.Point(151, 164);
             this.button1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(244, 75);
@@ -111,7 +110,6 @@
             // 
             this.GameID.HeaderText = "Game ID";
             this.GameID.Name = "GameID";
-            this.GameID.ReadOnly = true;
             // 
             // GameName
             // 
@@ -155,7 +153,7 @@
             // 
             // txtQu
             // 
-            this.txtQu.Location = new System.Drawing.Point(177, 111);
+            this.txtQu.Location = new System.Drawing.Point(151, 111);
             this.txtQu.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtQu.Name = "txtQu";
             this.txtQu.Size = new System.Drawing.Size(244, 39);
@@ -165,7 +163,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 111);
+            this.label2.Location = new System.Drawing.Point(22, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 33);
@@ -175,7 +173,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(491, 60);
+            this.label3.Location = new System.Drawing.Point(503, 58);
             this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 33);
@@ -184,7 +182,7 @@
             // 
             // txtCusID
             // 
-            this.txtCusID.Location = new System.Drawing.Point(664, 57);
+            this.txtCusID.Location = new System.Drawing.Point(664, 55);
             this.txtCusID.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txtCusID.Name = "txtCusID";
             this.txtCusID.Size = new System.Drawing.Size(244, 39);
@@ -222,6 +220,7 @@
             // 
             // btnDel
             // 
+            this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDel.Location = new System.Drawing.Point(1086, 219);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(133, 47);
@@ -232,7 +231,7 @@
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(919, 55);
+            this.btnFind.Location = new System.Drawing.Point(919, 53);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 42);
             this.btnFind.TabIndex = 13;
@@ -290,12 +289,6 @@
         private System.Windows.Forms.Button btnCheckout;
         private System.Windows.Forms.TextBox txtQu;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GameID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GameName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gameplatform;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCusID;
         private System.Windows.Forms.TextBox txtTotal;
@@ -304,5 +297,11 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Label lblCustInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GameID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GameName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gameplatform;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
     }
 }

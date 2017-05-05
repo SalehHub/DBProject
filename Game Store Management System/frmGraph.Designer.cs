@@ -29,27 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource13 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.dtGraphBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GameStore2DataSet = new Game_Store_Management_System.GameStore2DataSet();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.txtYear = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnFind = new System.Windows.Forms.Button();
-            this.dtGraphBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.GameStore2DataSet = new Game_Store_Management_System.GameStore2DataSet();
             this.dtGraphTableAdapter = new Game_Store_Management_System.GameStore2DataSetTableAdapters.dtGraphTableAdapter();
             this.lblHiMonth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtGraphBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GameStore2DataSet)).BeginInit();
             this.SuspendLayout();
             // 
+            // dtGraphBindingSource
+            // 
+            this.dtGraphBindingSource.DataMember = "dtGraph";
+            this.dtGraphBindingSource.DataSource = this.GameStore2DataSet;
+            // 
+            // GameStore2DataSet
+            // 
+            this.GameStore2DataSet.DataSetName = "GameStore2DataSet";
+            this.GameStore2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // reportViewer1
             // 
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            reportDataSource13.Name = "DataSet1Graph";
-            reportDataSource13.Value = this.dtGraphBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource13);
+            reportDataSource3.Name = "DataSet1Graph";
+            reportDataSource3.Value = this.dtGraphBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Game_Store_Management_System.Graph.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 152);
             this.reportViewer1.Name = "reportViewer1";
@@ -83,16 +93,6 @@
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dtGraphBindingSource
-            // 
-            this.dtGraphBindingSource.DataMember = "dtGraph";
-            this.dtGraphBindingSource.DataSource = this.GameStore2DataSet;
-            // 
-            // GameStore2DataSet
-            // 
-            this.GameStore2DataSet.DataSetName = "GameStore2DataSet";
-            this.GameStore2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // dtGraphTableAdapter
             // 
             this.dtGraphTableAdapter.ClearBeforeFill = true;
@@ -117,7 +117,8 @@
             this.Controls.Add(this.txtYear);
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Times New Roman", 16.2F);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
+            this.MaximizeBox = false;
             this.Name = "frmGraph";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

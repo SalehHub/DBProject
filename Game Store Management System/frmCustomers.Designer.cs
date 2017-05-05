@@ -176,9 +176,9 @@
             this.gbadd.Controls.Add(this.label1);
             this.gbadd.Controls.Add(this.btnSave);
             this.gbadd.Controls.Add(this.btnUpdate);
-            this.gbadd.Location = new System.Drawing.Point(455, 7);
+            this.gbadd.Location = new System.Drawing.Point(383, 7);
             this.gbadd.Name = "gbadd";
-            this.gbadd.Size = new System.Drawing.Size(672, 224);
+            this.gbadd.Size = new System.Drawing.Size(744, 224);
             this.gbadd.TabIndex = 11;
             this.gbadd.TabStop = false;
             this.gbadd.Visible = false;
@@ -188,7 +188,7 @@
             this.txtLName.Location = new System.Drawing.Point(529, 25);
             this.txtLName.Name = "txtLName";
             this.txtLName.PromptChar = ' ';
-            this.txtLName.Size = new System.Drawing.Size(140, 39);
+            this.txtLName.Size = new System.Drawing.Size(209, 39);
             this.txtLName.TabIndex = 19;
             // 
             // lblLName

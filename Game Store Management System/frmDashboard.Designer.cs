@@ -49,7 +49,7 @@
             this.btnManageItems.Location = new System.Drawing.Point(395, 267);
             this.btnManageItems.Name = "btnManageItems";
             this.btnManageItems.Size = new System.Drawing.Size(274, 74);
-            this.btnManageItems.TabIndex = 0;
+            this.btnManageItems.TabIndex = 1;
             this.btnManageItems.Text = "Games";
             this.btnManageItems.UseVisualStyleBackColor = true;
             this.btnManageItems.Click += new System.EventHandler(this.btnManageItems_Click);
@@ -61,7 +61,7 @@
             this.btnManageUsers.Location = new System.Drawing.Point(395, 347);
             this.btnManageUsers.Name = "btnManageUsers";
             this.btnManageUsers.Size = new System.Drawing.Size(274, 74);
-            this.btnManageUsers.TabIndex = 1;
+            this.btnManageUsers.TabIndex = 2;
             this.btnManageUsers.Text = "Staff";
             this.btnManageUsers.UseVisualStyleBackColor = true;
             this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
@@ -73,17 +73,17 @@
             this.btnManageCust.Location = new System.Drawing.Point(395, 187);
             this.btnManageCust.Name = "btnManageCust";
             this.btnManageCust.Size = new System.Drawing.Size(274, 74);
-            this.btnManageCust.TabIndex = 2;
+            this.btnManageCust.TabIndex = 0;
             this.btnManageCust.Text = "Customers";
             this.btnManageCust.UseVisualStyleBackColor = true;
             this.btnManageCust.Click += new System.EventHandler(this.btnManageCust_Click);
             // 
             // btnshowLoginRecords
             // 
-            this.btnshowLoginRecords.Location = new System.Drawing.Point(32, 187);
+            this.btnshowLoginRecords.Location = new System.Drawing.Point(12, 187);
             this.btnshowLoginRecords.Name = "btnshowLoginRecords";
-            this.btnshowLoginRecords.Size = new System.Drawing.Size(274, 74);
-            this.btnshowLoginRecords.TabIndex = 3;
+            this.btnshowLoginRecords.Size = new System.Drawing.Size(244, 74);
+            this.btnshowLoginRecords.TabIndex = 8;
             this.btnshowLoginRecords.Text = "Show login records";
             this.btnshowLoginRecords.UseVisualStyleBackColor = true;
             this.btnshowLoginRecords.Click += new System.EventHandler(this.btnshowLoginRecords_Click);
@@ -102,10 +102,10 @@
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLogout.Location = new System.Drawing.Point(928, 130);
+            this.btnLogout.Location = new System.Drawing.Point(809, 187);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(125, 40);
-            this.btnLogout.TabIndex = 5;
+            this.btnLogout.Size = new System.Drawing.Size(244, 74);
+            this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
@@ -115,7 +115,7 @@
             this.button1.Location = new System.Drawing.Point(237, 506);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(274, 74);
-            this.button1.TabIndex = 6;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Add Orders";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -147,7 +147,7 @@
             this.btnGraph.Location = new System.Drawing.Point(237, 586);
             this.btnGraph.Name = "btnGraph";
             this.btnGraph.Size = new System.Drawing.Size(274, 74);
-            this.btnGraph.TabIndex = 9;
+            this.btnGraph.TabIndex = 6;
             this.btnGraph.Text = "Sales graph";
             this.btnGraph.UseVisualStyleBackColor = true;
             this.btnGraph.Click += new System.EventHandler(this.btnGraph_Click);
@@ -158,7 +158,7 @@
             this.button3.Location = new System.Drawing.Point(539, 506);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(274, 74);
-            this.button3.TabIndex = 16;
+            this.button3.TabIndex = 5;
             this.button3.Text = "Edit Orders";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click_2);
@@ -170,7 +170,7 @@
             this.btnInvoices.Location = new System.Drawing.Point(395, 426);
             this.btnInvoices.Name = "btnInvoices";
             this.btnInvoices.Size = new System.Drawing.Size(274, 74);
-            this.btnInvoices.TabIndex = 17;
+            this.btnInvoices.TabIndex = 3;
             this.btnInvoices.Text = "Invoices";
             this.btnInvoices.UseVisualStyleBackColor = true;
             this.btnInvoices.Click += new System.EventHandler(this.btnInvoices_Click);
